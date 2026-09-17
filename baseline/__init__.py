@@ -1,0 +1,1 @@
+"""Multimodal table recognition baseline."""
