@@ -1,0 +1,3239 @@
+{
+  "version": 2,
+  "source": "analysis_three_runs.xlsx",
+  "bucket_filter": "split",
+  "choices": [
+    "vl",
+    "flash",
+    "max",
+    "retry"
+  ],
+  "count": 129,
+  "questions": [
+    {
+      "id": 7,
+      "file_name": "002.pdf",
+      "question_type": "extract",
+      "question": "列出所有非流动负债的本期金额",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"95250987.68\",\"881323.23\",\"15401527.35\",\"10540766.93\",\"122074605.19\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"95250987.68\",\"881323.23\",\"15401527.35\",\"10540766.93\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"95250987.68\",\"\",\"\",\"\",\"881323.23\",\"\",\"\",\"\",\"15401527.35\",\"10540766.93\",\"\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[95250987.68,\"\",\"\",\"\",881323.23,\"\",\"\",\"\",15401527.35,10540766.93,\"\"]"
+        }
+      }
+    },
+    {
+      "id": 8,
+      "file_name": "002.pdf",
+      "question_type": "extract",
+      "question": "列出所有非流动资产的上期末金额",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"17663778.06\",\"24132677.69\",\"908086512.30\",\"26653628.18\",\"3907669.91\",\"105814633.66\",\"135604327.01\",\"3531360.81\",\"25088416.69\",\"161613200.00\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"\",\"\",\"\",\"17663778.06\",\"\",\"\",\"24132677.69\",\"908086512.30\",\"26653628.18\",\"\",\"\",\"3907669.91\",\"105814633.66\",\"\",\"135604327.01\",\"3531360.81\",\"25088416.69\",\"161613200.00\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"\",\"\",\"\",\"17663778.0599999987\",\"\",\"\",\"24132677.6900000013\",\"908086512.2999999523\",\"26653628.1799999997\",\"\",\"\",\"3907669.9100000001\",\"105814633.6599999964\",\"\",\"135604327.0099999905\",\"3531360.8100000001\",\"25088416.6900000013\",161613200]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"\",\"\",\"\",17663778.06,\"\",\"\",24132677.69,908086512.3,26653628.18,\"\",\"\",3907669.91,105814633.66,\"\",135604327.01,3531360.81,25088416.69,161613200]"
+        }
+      }
+    },
+    {
+      "id": 10,
+      "file_name": "002.pdf",
+      "question_type": "thinking",
+      "question": "流动资产有几项",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "9"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "13"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "8"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "13"
+        }
+      }
+    },
+    {
+      "id": 11,
+      "file_name": "002.pdf",
+      "question_type": "thinking",
+      "question": "非流动资产有几项",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "14"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "18"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "10"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "10"
+        }
+      }
+    },
+    {
+      "id": 12,
+      "file_name": "002.pdf",
+      "question_type": "thinking",
+      "question": "流动负债有几项",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "9"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "13"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "8"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "8"
+        }
+      }
+    },
+    {
+      "id": 15,
+      "file_name": "002.pdf",
+      "question_type": "thinking",
+      "question": "本期末去除归属母公司股东权益的股东权益有多少",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"1740487431.56\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"135088205.15\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"135088205.150000006\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[135088205.15]"
+        }
+      }
+    },
+    {
+      "id": 18,
+      "file_name": "003.pdf",
+      "question_type": "extract",
+      "question": "本期和上期，管理费用各是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"-1894782.60\",\"-4699378.99\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"40964502.20\",\"44587844.55\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"40864603.200000003\",\"41567841.5799999982\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[40864602.2,41567841.56]"
+        }
+      }
+    },
+    {
+      "id": 19,
+      "file_name": "003.pdf",
+      "question_type": "thinking",
+      "question": "营业总收入由那些项组成？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"营业收入\",\"减：营业成本\",\"税金及附加\",\"销售费用\",\"管理费用\",\"研发费用\",\"财务费用\",\"其中：利息费用\",\"利息收入\",\"加：其他收益\",\"投资收益（损失以“-”号填列）\",\"其中：对联营企业和合营企业的投资收益\",\"以摊余成本计量的金融资产终止确认收益\",\"净敞口套期收益（损失以“-”号填列）\",\"公允价值变动收益（损失以“-”号填列）\",\"信用减值损失（损失以“-”号填列）\",\"资产减值损失（损失以“-”号填列）\",\"资产处置收益（损失以“-”号填列）\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"\"]"
+        }
+      }
+    },
+    {
+      "id": 21,
+      "file_name": "005.pdf",
+      "question_type": "extract",
+      "question": "上年末，本年初和本年末，未分配利润各是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"1807707608.38\",\"1807707608.38\",\"1875575636.71\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"407166999.88\",\"407166999.88\",\"452817690.44\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"407166999.8799999952\",\"407166999.8799999952\",\"452817690.4399999976\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[407166999.88,407166999.88,452817690.44]"
+        }
+      }
+    },
+    {
+      "id": 24,
+      "file_name": "005.pdf",
+      "question_type": "thinking",
+      "question": "归属母公司股东权益的包含那些部分？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"股本\",\"其他权益工具\",\"资本公积\",\"减：库存股\",\"其他综合收益\",\"专项储备\",\"盈余公积\",\"未分配利润\",\"少数股东权益\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"股本\",\"其他权益工具\",\"资本公积\",\"减：库存股\",\"其他综合收益\",\"专项储备\",\"盈余公积\",\"未分配利润\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"股本\",\"优先股\",\"永续债\",\"其他\",\"资本公积\",\"减：库存股\",\"其他综合收益\",\"专项储备\",\"盈余公积\",\"未分配利润\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"股本\",\"其他权益工具\",\"资本公积\",\"减：库存股\",\"其他综合收益\",\"专项储备\",\"盈余公积\",\"未分配利润\"]"
+        }
+      }
+    },
+    {
+      "id": 25,
+      "file_name": "006.pdf",
+      "question_type": "structure",
+      "question": "应收账款表，恢复一下 第一行 和 前1列的表格结构",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":4,\"col_count\":3,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"期初余额\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"分类为以公允价值计量且变动计入当期损益的金融资产小计\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"理财产品\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":3,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":15,\"col_count\":6,\"cells\":[{\"text\":\"类别\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":5},{\"text\":\"单项计提坏账准备的应收账款\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"按组合计提坏账准备的应收账款\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其中：信用风险特征组合\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"类别\",\"row\":8,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"单项计提坏账准备的应收账款\",\"row\":11,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"按组合计提坏账准备的应收账款\",\"row\":12,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其中：信用风险特征组合\",\"row\":13,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":14,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":10,\"col_count\":3,\"cells\":[{\"text\":\"账龄\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"期初余额\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"1年以内\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1－2年\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2－3年\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3－4年\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4－5年\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"5年以上\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"小计\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"减：坏账准备\",\"row\":8,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":9,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":10,\"col_count\":3,\"cells\":[{\"text\":\"账龄\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"期初余额\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"1年以内\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1－2年\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2－3年\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3－4年\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4－5年\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"5年以上\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"小计\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"减：坏账准备\",\"row\":8,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":9,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 32,
+      "file_name": "006.pdf",
+      "question_type": "structure",
+      "question": "坏账表中，恢复前2行和第一列的表格结构",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":5,\"col_count\":3,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"期初余额\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"分类为以公允价值计量且变动计入当期损益的金融资产小计\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"理财产品\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"821829036.23\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"641913021.54\",\"row\":3,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":7,\"col_count\":6,\"cells\":[{\"text\":\"类别\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":5},{\"text\":\"账面余额\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"坏账准备\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"账面价值\",\"row\":1,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"单项计提坏账准备的应收账款\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"按组合计提坏账准备的应收账款\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其中：信用风险特征组合\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":7,\"col_count\":6,\"cells\":[{\"text\":\"类别\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"账面价值\",\"row\":0,\"col\":5,\"rowspan\":3,\"colspan\":1},{\"text\":\"账面余额\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"坏账准备\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"单项计提坏账准备的应收账款\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"按组合计提坏账准备的应收账款\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其中：信用风险特征组合\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":7,\"col_count\":6,\"cells\":[{\"text\":\"类别\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"期末余额\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":5},{\"text\":\"账面余额\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"坏账准备\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"账面价值\",\"row\":1,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"单项计提坏账准备的应收账款\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"按组合计提坏账准备的应收账款\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其中：信用风险特征组合\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 33,
+      "file_name": "006.pdf",
+      "question_type": "extract",
+      "question": "坏账表中，期末余额中单项计提坏账准备的金额和计提比例是分别是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"12851007.4499999993\",\"6.42\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"7586126.44\",\"59.03\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"7586126.4400000004\",\"59.03\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[7586126.44,59.03]"
+        }
+      }
+    },
+    {
+      "id": 35,
+      "file_name": "006.pdf",
+      "question_type": "extract",
+      "question": "坏账表中，期末余额中坏账准备中，各个分类的金额是多少",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"单项计提坏账准备的应收账款\",\"按组合计提坏账准备的应收账款\",\"其中：信用风险特征组合\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"7586126.44\",\"24653375.86\",\"24653375.86\",\"32239502.30\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"7586126.4400000004\",\"24653375.8599999994\",\"24653375.8599999994\",\"32239502.3000000007\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[7586126.44,24653375.86,24653375.86,32239502.3]"
+        }
+      }
+    },
+    {
+      "id": 38,
+      "file_name": "006.pdf",
+      "question_type": "extract",
+      "question": "坏账表中，期初余额中坏账准备，各个分类的金额是多少",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"4881245.42\",\"214430340.23\",\"214430340.23\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"4881245.42\",\"25768946.28\",\"25768946.28\",\"30650191.70\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"4881245.4199999999\",\"25768946.2800000012\",\"25768946.2800000012\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[4881245.42,25768946.28,25768946.28]"
+        }
+      }
+    },
+    {
+      "id": 41,
+      "file_name": "006.pdf",
+      "question_type": "thinking",
+      "question": "坏账表中，按组合计提坏账准备的应收账款的金额期末余额与期初余额的插值是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "-63245701.58"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "-27003325.59"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "27003325.59"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "-27003325.59"
+        }
+      }
+    },
+    {
+      "id": 51,
+      "file_name": "007.pdf",
+      "question_type": "structure",
+      "question": "恢复固定资产情况表的第一行，第一列表结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":5,\"col_count\":6,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"房屋及建筑物\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"管网设备\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"机器设备\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"运输工具\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"办公电子及其他设备\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":29,\"col_count\":7,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"房屋及建筑物\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"管网设备\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"机器设备\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"运输工具\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"办公电子及其他设备\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"一. 账面原值\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1. 期初余额\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2. 本期增加金额\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"购置\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"在建工程转入\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3. 本期减少金额\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":8,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":9,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4. 期末余额\",\"row\":10,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"二. 累计折旧\",\"row\":11,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1. 期初余额\",\"row\":12,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2. 本期增加金额\",\"row\":13,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":14,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3. 本期减少金额\",\"row\":15,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":16,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4. 期末余额\",\"row\":17,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"三. 减值准备\",\"row\":18,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1. 期初余额\",\"row\":19,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2. 本期增加金额\",\"row\":20,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"重分类\",\"row\":21,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":22,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3. 本期减少金额\",\"row\":23,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":24,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4. 期末余额\",\"row\":25,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"四. 账面价值\",\"row\":26,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1. 期末账面价值\",\"row\":27,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2. 期初账面价值\",\"row\":28,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":29,\"col_count\":7,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"房屋及建筑物\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"管网设备\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"机器设备\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"运输工具\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"办公电子及其他设备\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"一．账面原值\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"购置\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"在建工程转入\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":8,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":9,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":10,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"二．累计折旧\",\"row\":11,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":12,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":13,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":14,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":15,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":16,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":17,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"三．减值准备\",\"row\":18,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":19,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":20,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"重分类\",\"row\":21,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":22,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":23,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":24,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":25,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"四．账面价值\",\"row\":26,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期末账面价值\",\"row\":27,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．期初账面价值\",\"row\":28,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":29,\"col_count\":7,\"cells\":[{\"text\":\"项目\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"房屋及建筑物\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"管网设备\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"机器设备\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"运输工具\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"办公电子及其他设备\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"合计\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"一．账面原值\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"购置\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"在建工程转入\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":8,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他\",\"row\":9,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":10,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"二．累计折旧\",\"row\":11,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":12,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":13,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":14,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":15,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":16,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":17,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"三．减值准备\",\"row\":18,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期初余额\",\"row\":19,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．本期增加金额\",\"row\":20,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"重分类\",\"row\":21,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"本期计提\",\"row\":22,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3．本期减少金额\",\"row\":23,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"处置或报废\",\"row\":24,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"4．期末余额\",\"row\":25,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"四．账面价值\",\"row\":26,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1．期末账面价值\",\"row\":27,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2．期初账面价值\",\"row\":28,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 57,
+      "file_name": "007.pdf",
+      "question_type": "extract",
+      "question": "固定资产情况表中账面原值期末余额按资产类别列出。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"房屋及建筑物\",\"管网设备\",\"机器设备\",\"运输工具\",\"办公电子及其他设备\",\"合计\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"311640136.81\",\"1502429632.12\",\"802815549.18\",\"33551089.51\",\"24711347.91\",\"2675147755.53\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"311640136.8100000024\",\"1502429632.1199998856\",\"802815549.1799999475\",\"33551089.5100000016\",\"24711347.9100000001\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[311640136.81,1502429632.12,802815549.18,33551089.51,24711347.91,2675147755.53]"
+        }
+      }
+    },
+    {
+      "id": 58,
+      "file_name": "007.pdf",
+      "question_type": "extract",
+      "question": "固定资产情况表本期购置的各分类资产金额是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"6581441.34\",\"34512218.51\",\"275016.57\",\"1876349.13\",\"403081.37\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"\",\"\",\"81371.67\",\"1876349.13\",\"1767848.19\",\"3725568.99\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"\",\"\",\"81371.67\",\"1876349.1299999999\",\"1767848.1899999999\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"\",\"\",81371.67,1876349.13,1767848.19]"
+        }
+      }
+    },
+    {
+      "id": 71,
+      "file_name": "010.png",
+      "question_type": "thinking",
+      "question": "此营最后一个活动是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "(营地结束)"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "营地结束"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "家长结营交接"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "家长结营交接"
+        }
+      }
+    },
+    {
+      "id": 100,
+      "file_name": "011.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "双语/全英文(Chinese or English)"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "中文和英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "中英文"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "中英文"
+        }
+      }
+    },
+    {
+      "id": 102,
+      "file_name": "011.jpg",
+      "question_type": "extract",
+      "question": "该表最左侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "课程基本信息Course Information"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "课程基本信息 Course Information"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "课程代码（Course Code）"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "课程代码（Course Code）"
+        }
+      }
+    },
+    {
+      "id": 106,
+      "file_name": "011.jpg",
+      "question_type": "extract",
+      "question": "请提取“课程名称/Course Name”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "中文:生物信息学算法原理 英文:Algorithms in computational biology"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "生物信息学算法原理 Algorithms in computational biology"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"生物信息学算法原理\",\"Algorithms in computational biology\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"中文:生物信息学算法原理\",\"英文:Algorithms in computational biology\"]"
+        }
+      }
+    },
+    {
+      "id": 110,
+      "file_name": "012.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 117,
+      "file_name": "012.jpg",
+      "question_type": "extract",
+      "question": "请提取“包含的文化活动”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Certificate of performance awarded by Govt. Institution in Art/Music/Literature at \"National level"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "是"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Certificate of Performance awarded by Govt. Institution in Art/Music/Literature at \\\"National level\",\"Certificate of performance awarded by Govt. institution in Art/Music/Literature at State Level\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Certificate of Performance awarded by Govt. Institution in Art/Music/Literature at \\\"National level\",\"Certificate of performance awarded by Govt. institution in Art/Music/Literature at State Level\"]"
+        }
+      }
+    },
+    {
+      "id": 120,
+      "file_name": "013.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Arabic and English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英语和阿拉伯语"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 128,
+      "file_name": "013.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：电源、过滤网、室内机颜色、保修。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"220V/50Hz\",\"Available\",\"Not specified\",\"(5) Year. Other parts: ≥ (2) Year\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"AC≥(220)V/(50)Hz\",\"Available\",\"\",\"Compressor (5) Year. Other parts: ≥ (2) Year\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"AC≥ (220)V/(50)Hz\",\"Available\",\"\",\"(5) Year. Other parts: ≥ (2) Year\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"AC≥ (220)V/(50)Hz\",\"Available\",\"\",\"Compressor (5) Year. Other parts: ≥ (2) Year\"]"
+        }
+      }
+    },
+    {
+      "id": 130,
+      "file_name": "014.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"阿拉伯语\",\"英语\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 147,
+      "file_name": "015.jpg",
+      "question_type": "thinking",
+      "question": "Circular Coil 含有铝，这个表述对么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "不对"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "No"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "否"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "否"
+        }
+      }
+    },
+    {
+      "id": 148,
+      "file_name": "015.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：电风扇颜色、表格所在页码、圆形线圈表包含规格区、电风扇表包含 Specifications 区。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"\",\"37\",\"true\",\"false\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"\",\"37\",\"Component & Specification\",\"Component & Specification\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"\",37,\"是\",\"是\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"\",37,\"是\",\"是\"]"
+        }
+      }
+    },
+    {
+      "id": 149,
+      "file_name": "016.jpg",
+      "question_type": "extract",
+      "question": "该文件中主表或主区域的标题是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Photoelectric and Leads Set"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Photoelectric effect apparatus with solar cell"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Component & Specification"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Component & Specification"
+        }
+      }
+    },
+    {
+      "id": 156,
+      "file_name": "016.jpg",
+      "question_type": "extract",
+      "question": "请提取“Leads Set 组成”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Banana plugs, Flexible leads, Double (PVC) covered."
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Banana plugs. Flexible leads. Double (PVC) covered."
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"(25) cm long (red, black, and yellow).\",\"(50) cm long (red, black, and green).\",\"(100) cm long (red, black, and blue).\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"(25) cm long (red, black, and yellow).\",\"(50) cm long (red, black, and green).\",\"(100) cm long (red, black, and blue).\"]"
+        }
+      }
+    },
+    {
+      "id": 160,
+      "file_name": "017.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 168,
+      "file_name": "017.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：District 2 第二名学校、District 1 第一名分数、District 2 第一名分数、页脚。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"Idaho State University\",\"313\",\"250\",\"Fall 2012 NOT Ranking Report\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"Idaho State University\",313,250,\"Page 13\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Idaho State University\",313,250,\"Fall 2012 NDT Ranking Report Page 13\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Idaho State University\",313,250,\"Fall 2012 NDT Ranking Report Page 13\"]"
+        }
+      }
+    },
+    {
+      "id": 176,
+      "file_name": "018.jpg",
+      "question_type": "extract",
+      "question": "请提取“Nuevas oficinas 消耗”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "10200"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "10.000"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "10000"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "10000"
+        }
+      }
+    },
+    {
+      "id": 178,
+      "file_name": "018.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：标黄服务、标蓝分组、表格页码、文件主题。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"Pabellón Azul\",\"Teatro\",\"5\",\"Datos de consumo estimado\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"Teatro Principal\",\"Servicios generales\",\"5\",\"PCT gasóleo C\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Teatro Principal\",\"Servicios generales\",5,\"PCT gasóleo C\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Teatro Principal\",\"Servicios generales\",5,\"PCT gasóleo C\"]"
+        }
+      }
+    },
+    {
+      "id": 179,
+      "file_name": "019.jpg",
+      "question_type": "extract",
+      "question": "该文件中主表或主区域的标题是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Santykinis ir maksimalusis vandens srautas"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "2.1. Santechikos įtaisai"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "2.1. Santechnikos įtaisai"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "2.1. Santechnikos įtaisai"
+        }
+      }
+    },
+    {
+      "id": 187,
+      "file_name": "019.jpg",
+      "question_type": "extract",
+      "question": "请提取“1.2 表第一个水流值”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "8.0"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "2.0"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "8"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "2.0"
+        }
+      }
+    },
+    {
+      "id": 190,
+      "file_name": "020.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 200,
+      "file_name": "021.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 208,
+      "file_name": "021.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：BTM Si%、2HM C%、红色限制单元数量、绿色数值单元数量。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"≤0.6\",\"≥0.40\",5,6]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"0.220\",\"0.450\",8,16]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"0.22\",\"0.45\",8,16]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[0.22,0.45,8,16]"
+        }
+      }
+    },
+    {
+      "id": 210,
+      "file_name": "022.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 218,
+      "file_name": "022.png",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：2011-12 Cash and cash equivalents、2012-13 Receivables、2014-15 Employee provisions、估算年度列数。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"2806\",\"6485\",\"6025\",5]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"2806\",\"6485\",\"5735\",\"5\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[2806,6485,5735,5]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[2806,6485,5735,5]"
+        }
+      }
+    },
+    {
+      "id": 230,
+      "file_name": "024.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 238,
+      "file_name": "024.png",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：Never serviced residential inland、Don’t know/refused residential total、Frequency once every two years residential inland、表格主分区数量。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"20\",\"9\",\"12\",\"2\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[20,9,2,2]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[20,\"\",\"\",2]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[20,\"\",\"\",2]"
+        }
+      }
+    },
+    {
+      "id": 241,
+      "file_name": "025.png",
+      "question_type": "extract",
+      "question": "“Three or more times a year”这一行中，住宅客户 Mild 列的值是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "61"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "0"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "--"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "--"
+        }
+      }
+    },
+    {
+      "id": 246,
+      "file_name": "025.png",
+      "question_type": "extract",
+      "question": "对于“Don’t know/Refused”，住宅客户和小型商业客户的 Total，哪类客户更高？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Residential Customers"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Small Commercial Customers"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "小型商业客户"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "小型商业客户"
+        }
+      }
+    },
+    {
+      "id": 248,
+      "file_name": "025.png",
+      "question_type": "thinking",
+      "question": "在小型商业客户 Total 列中，找出比例低于10%的所有频率选项。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"Once every three years\",\"Once every four years or less frequently\",\"Never\",\"Don't know/Refused\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"Once every two years\",\"Once every three years\",\"Once every four years or less frequently\",\"Don't know/Refused\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Once every two years\",\"Once every three years\",\"Once every four years or less frequently\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Once every two years\",\"Once every three years\",\"Once every four years or less frequently\",\"Don't know/Refused\"]"
+        }
+      }
+    },
+    {
+      "id": 249,
+      "file_name": "026.png",
+      "question_type": "extract",
+      "question": "2027年各季度，剂量错误的数量是多少？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"\",\"1Q2017\",\"2Q2017\",\"3Q2017\",\"4Q2017\",\"YTD\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"3\",\"1\",\"\",\"\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[3,1,\"\",\"\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[2,\"\",\"\",\"\"]"
+        }
+      }
+    },
+    {
+      "id": 268,
+      "file_name": "027.webp",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：GLM-OCR TEDs_TEST、GLM-OCR Nanonts-KIE、GLM-OCR Handwritten-Forms、突出显示模型。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"94.6\",\"93.7\",\"86.1\",\"UniMERNet\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"86.0\",\"93.7\",\"86.1\",\"GLM-OCR\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[86,\"93.7\",\"86.1\",\"GLM-OCR\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[86,93.7,86.1,\"GLM-OCR\"]"
+        }
+      }
+    },
+    {
+      "id": 278,
+      "file_name": "028.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：星期三第一二节、星期五第九十节、午休行文本、每周列数。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"大学生心理健康教育 (1-4周)\",\"网络设备及应用 (1-16周)\",\"\",\"5\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"大学生心理健康教育(1-4周)\",\"网络设备及应用(1-6周)\",\"\",\"5\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"大学生心理健康教育（1-4周）\",\"网络设备及应用（1-16周）\",\"\",5]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"大学生心理健康教育（1-4周）\",\"网络设备及应用（1-16周）\",\"\",5]"
+        }
+      }
+    },
+    {
+      "id": 296,
+      "file_name": "030.png",
+      "question_type": "extract",
+      "question": "请提取“第二条义务关键词”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "povinností výrobce"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "predložiť PDS potvrdenie o pôvode vyrobenej elektriny pre predchádzajúci kalendárny rok"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "predložiť PDS potvrdenie o pôvode vyrobenej elektriny za predchádzajúci kalendárny rok"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "predložiť PDS potvrdenie o pôvode vyrobenej elektriny za predchádzajúci kalendárny rok"
+        }
+      }
+    },
+    {
+      "id": 297,
+      "file_name": "030.png",
+      "question_type": "extract",
+      "question": "请提取“第三条期限”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "pri zariadeniach výrobcu uvedených do prevádzky po 15. auguste je výrobca elektriny povinný informovať prevádzkovateľa regionálnej distribučnej sústavy o využití práva na podporu najneskôr 30 dní pred uvedením zariadenia výrobcu elektriny do prevádzky"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "pri zariaadeniach výrobcu elektriny uvedených do prevádzky po 15. auguste je výrobca elektriny povinný informovať prevádzkovateľa regionálnej distribučnej sústavy o využití práva na podporu najneskôr 30 dní pred uvedením zariadenia výrobcu elektriny do prevádzky"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "najneskôr 30 dní pred uvedením zariadenia výrobcu elektriny do prevádzky"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "najneskôr 30 dní pred uvedením zariadenia výrobcu elektriny do prevádzky"
+        }
+      }
+    },
+    {
+      "id": 302,
+      "file_name": "031.png",
+      "question_type": "extract",
+      "question": "该表最左侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Agrêmiação"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Agregiação"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Agremiação"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Agremiação"
+        }
+      }
+    },
+    {
+      "id": 308,
+      "file_name": "031.png",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：Borboleta Transgênero nota、满分队伍数量、最高分、最低分。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"10\",\"3\",\"10\",\"9.3\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"10\",\"3\",\"10\",\"9,3\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[10,3,10,\"9.3\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[10,3,10,9.3]"
+        }
+      }
+    },
+    {
+      "id": 330,
+      "file_name": "034.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "中文和英文"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "中英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "中文"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "中文"
+        }
+      }
+    },
+    {
+      "id": 331,
+      "file_name": "034.png",
+      "question_type": "extract",
+      "question": "请给出该表可见主表的列数；如果图片基本为空则填写 0。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "6"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "8"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "5"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "5"
+        }
+      }
+    },
+    {
+      "id": 342,
+      "file_name": "035.png",
+      "question_type": "extract",
+      "question": "该表最左侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Concise and readable"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": ""
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "（空）"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "（空）"
+        }
+      }
+    },
+    {
+      "id": 345,
+      "file_name": "035.png",
+      "question_type": "extract",
+      "question": "请提取“Full document control 不支持工具”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"\",\"✓\",\"✓\",\"✗\",\"✗\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "AsciiDoc, MDX"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"AsciiDoc\",\"MDX\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"AsciiDoc\",\"MDX\"]"
+        }
+      }
+    },
+    {
+      "id": 374,
+      "file_name": "038.png",
+      "question_type": "extract",
+      "question": "请提取“Temperature levels”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "25–35"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "25–35 25 30 35"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"25–35\",25,30,35]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"25–35\",25,30,35]"
+        }
+      }
+    },
+    {
+      "id": 376,
+      "file_name": "038.png",
+      "question_type": "extract",
+      "question": "请提取“Initial dye concentration levels”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "4–8"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "4–8 4 6 8"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"4–8\",\"4\",\"6\",\"8\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"4–8\",4,6,8]"
+        }
+      }
+    },
+    {
+      "id": 377,
+      "file_name": "038.png",
+      "question_type": "extract",
+      "question": "请提取“Mesh size levels”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Mesh size"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "50–150 50 100 150"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"50–150\",50,100,150]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"50–150\",50,100,150]"
+        }
+      }
+    },
+    {
+      "id": 394,
+      "file_name": "040.png",
+      "question_type": "extract",
+      "question": "请提取“Control N”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "362"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "938"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "958"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "938"
+        }
+      }
+    },
+    {
+      "id": 398,
+      "file_name": "040.png",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：Current smoker control percent、Current smoker case percent、Age mean control、Age mean case。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"14.1\",\"17.3\",\"54.5\",\"55.1\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"14.1\",\"18.0\",\"54.3\",\"55.1\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"14.1\",18,\"54.3\",\"55.1\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[14.1,18,54.3,55.1]"
+        }
+      }
+    },
+    {
+      "id": 400,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 401,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "请给出该表可见主表的列数；如果图片基本为空则填写 0。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "6"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "8"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "14"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "8"
+        }
+      }
+    },
+    {
+      "id": 404,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "请提取“Young total contact area A”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "142.82±745.384"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "142.87±6.384"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "142.877±8.384"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "142.877±6.384"
+        }
+      }
+    },
+    {
+      "id": 405,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "请提取“Young total contact area B”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "142.82±15.754"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "13 852.24 10394"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "131.852±10.934"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "131.852±10.934"
+        }
+      }
+    },
+    {
+      "id": 406,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "请提取“Elderly total maximum force A”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "49.730±0.000"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "59217805362"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "592.178±95.362"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "592.178±95.362"
+        }
+      }
+    },
+    {
+      "id": 407,
+      "file_name": "041.png",
+      "question_type": "extract",
+      "question": "请提取“Young total peak pressure A”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "142.82±175.54"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "247.86918.830"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "278.869±70.830"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "270.869±70.830"
+        }
+      }
+    },
+    {
+      "id": 408,
+      "file_name": "041.png",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：Elderly total peak pressure C、分组数量、面罩类别数量、指标区块数量。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"149403±2996\",\"4\",\"3\",\"2\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"140.013±0.023\",2,3,4]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"247.564±45.406\",2,3,4]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"207.564±45.410\",2,3,4]"
+        }
+      }
+    },
+    {
+      "id": 428,
+      "file_name": "044.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：中标价、工期、项目经理、合同签订时间。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"10.41%\",\"合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定\",\"王永平、梁卫凤、胡浙明\",\"2023年4月12日\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"10.41%\",\"合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定\",\"['王永平', '梁卫凤', '胡浙明']\",\"2023年4月12日\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"10.41%\",\"合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定\",\"王永平\",\"梁卫凤\",\"胡浙明\",\"2023年4月12日\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"10.41%\",\"合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定\",\"王永平\",\"梁卫凤\",\"胡浙明\",\"2023年4月12日\"]"
+        }
+      }
+    },
+    {
+      "id": 430,
+      "file_name": "045.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 443,
+      "file_name": "046.jpg",
+      "question_type": "extract",
+      "question": "该表最右侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "杨周"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Number of passengers 乘车人数"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Pick-Up Locations 接送地点"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Pick-Up Locations 接送地点"
+        }
+      }
+    },
+    {
+      "id": 490,
+      "file_name": "052.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "中文和英文"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "中英混合"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "中英文"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "中文"
+        }
+      }
+    },
+    {
+      "id": 500,
+      "file_name": "053.jpg",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "English"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "英文"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "英语"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "英语"
+        }
+      }
+    },
+    {
+      "id": 503,
+      "file_name": "053.jpg",
+      "question_type": "extract",
+      "question": "该表最右侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Iron 2%"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Amount Per Serving"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Iron"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "% Daily Value"
+        }
+      }
+    },
+    {
+      "id": 513,
+      "file_name": "054.jpg",
+      "question_type": "extract",
+      "question": "该表最右侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "% RP % AR"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "% RI* % AR**"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "% RI* % AR*"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "% RI* % AR*"
+        }
+      }
+    },
+    {
+      "id": 524,
+      "file_name": "055.jpg",
+      "question_type": "extract",
+      "question": "请提取“套餐分类之一”对应的值。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "酷睿i7-8750H 8G DDR4"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "官方标配(原封)"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "家庭版"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "家庭版"
+        }
+      }
+    },
+    {
+      "id": 528,
+      "file_name": "055.jpg",
+      "question_type": "thinking",
+      "question": "请按表中顺序列出以下字段的答案：最低活动价、最高活动价、备注中是否含退换规则、表格下方说明条数。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"20299\",\"59999\",\"true\",\"3\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[399,79999,\"否\",3]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[399,79999,\"是\",3]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[399,79999,\"是\",3]"
+        }
+      }
+    },
+    {
+      "id": 529,
+      "file_name": "056.png",
+      "question_type": "extract",
+      "question": "包含蓝色标签的模块一共有多少个？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "3"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "5"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "6"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "6"
+        }
+      }
+    },
+    {
+      "id": 530,
+      "file_name": "056.png",
+      "question_type": "extract",
+      "question": "该表主要使用哪种语言或语言组合？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "中文"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "中英混合"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "中英文"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "中英文"
+        }
+      }
+    },
+    {
+      "id": 542,
+      "file_name": "057.jpg",
+      "question_type": "extract",
+      "question": "该表最左侧的表头或字段名是什么？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "英伟达"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "澎湃·美数课"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "CEO总薪酬"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "CEO总薪酬"
+        }
+      }
+    },
+    {
+      "id": 559,
+      "file_name": "059.pdf",
+      "question_type": "structure",
+      "question": "请恢复 59.pdf 中“Table 6 DeepSeek-V4-Pro-Max 与其他模型对比”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":1,\"col_count\":7,\"cells\":[{\"text\":\"Benchmark (Metric)\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Opus-4.6 Max\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPT-5.4 xHigh\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gemini-3.1-Pro High\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"K2.6 Thinking\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"GLM-5.1 Thinking\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS-V4-Pro Max\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":24,\"col_count\":7,\"cells\":[{\"text\":\"Benchmark (Metric)\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Opus-4.6\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPT-5.4\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gemini-3.1-Pro\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"K2.6\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"GLM-5.1\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS-V4-Pro\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Max\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"xHigh\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"High\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Thinking\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Thinking\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Max\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":23,\"col_count\":8,\"cells\":[{\"text\":\"Benchmark (Metric)\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Opus-4.6 Max\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPT-5.4 xHigh\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gemini-3.1-Pro High\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"K2.6 Thinking\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"GLM-5.1 Thinking\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS-V4-Pro Max\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":23,\"col_count\":8,\"cells\":[{\"text\":\"Benchmark (Metric)\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Opus-4.6 Max\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPT-5.4 xHigh\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gemini-3.1-Pro High\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"K2.6 Thinking\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"GLM-5.1 Thinking\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS-V4-Pro Max\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 580,
+      "file_name": "061.pdf",
+      "question_type": "extract",
+      "question": "请从 61.pdf 的“Table 12 中文功能写作评估”中提取：Business Writing 的 Subtotal 行。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"Business Writing\",\"Subtotal (小计)\",1349,879,436,34,\"65.16\",\"32.32\",\"2.52\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"Subtotal (小计)\",\"1349\",\"879\",\"436\",\"34\",\"65.16\",\"32.32\",\"2.52\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Subtotal (小计)\",1349,879,436,34,\"65.16\",\"32.32\",\"2.52\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Subtotal (小计)\",1349,879,436,34,65.16,32.32,2.52]"
+        }
+      }
+    },
+    {
+      "id": 589,
+      "file_name": "062.pdf",
+      "question_type": "structure",
+      "question": "请恢复 62.pdf 中“Table 13 中文创意写作评估”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":14,\"cells\":[{\"text\":\"Subcategory (文体)\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"#\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"Instruction Following(指令遵循)\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":6},{\"text\":\"Writing Quality (写作质量)\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":6},{\"text\":\"DS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":20,\"col_count\":14,\"cells\":[{\"text\":\"Subcategory (文体)\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"#\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"Instruction Following(指令遵循)\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":6},{\"text\":\"Writing Quality (写作质量)\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":6},{\"text\":\"DS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":21,\"col_count\":14,\"cells\":[{\"text\":\"Subcategory (文体)\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"#\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"Instruction Following(指令遵循)\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":6},{\"text\":\"Writing Quality (写作质量)\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":6},{\"text\":\"DS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":21,\"col_count\":14,\"cells\":[{\"text\":\"Subcategory (文体)\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"#\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"Instruction Following(指令遵循)\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":6},{\"text\":\"Writing Quality (写作质量)\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":6},{\"text\":\"DS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"DS%\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Gem%\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Tie%\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 604,
+      "file_name": "063.pdf",
+      "question_type": "extract",
+      "question": "请从 63.pdf 的“Table 1 catchment site characteristics”中提取：Cathedral Peak 3 (SA) 的 Mean annual rainfall (mm)。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "1436"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "1134"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "1504"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "1504"
+        }
+      }
+    },
+    {
+      "id": 607,
+      "file_name": "063.pdf",
+      "question_type": "thinking",
+      "question": "请找出 BFI 最高的 catchment。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Lambrechbos A (SA)"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Lambrechbos B (SA)"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Lambrechthos B (SA)"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Lambrechtbos B (SA)"
+        }
+      }
+    },
+    {
+      "id": 625,
+      "file_name": "065.pdf",
+      "question_type": "extract",
+      "question": "请从 65.pdf 的“盈利预测和财务指标”中提取：合理估值区间。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "6.50–7.00 元"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "6.50 - 7.00 元"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "6.50-7.00元"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "6.50-7.00元"
+        }
+      }
+    },
+    {
+      "id": 638,
+      "file_name": "066.pdf",
+      "question_type": "thinking",
+      "question": "请计算 2024-2026 年调整后归母净利润合计。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "74.6"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "8163"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "81.6"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "8163"
+        }
+      }
+    },
+    {
+      "id": 657,
+      "file_name": "068.pdf",
+      "question_type": "thinking",
+      "question": "请找出 WTQ 表中 test 最高的模型。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "TAPAS_LARGE inter-sqa TABLEFORMER_LARGE inter-sqa"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "TABLEFORMER_LARGE inter-sqa"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "TableFormerLarge inter-sqa"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "TableFormerLarge inter-sqa"
+        }
+      }
+    },
+    {
+      "id": 659,
+      "file_name": "069.pdf",
+      "question_type": "structure",
+      "question": "请恢复 69.pdf 中“Table 1 SQA perturbation results”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":6,\"cells\":[{\"text\":\"Before Perturb\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":3},{\"text\":\"After Perturb\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"ALL\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"SEQ\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL_d\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"VP\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":14,\"col_count\":6,\"cells\":[{\"text\":\"Before Perturb\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"After Perturb\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"ALL\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"SEQ\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALLd\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"VP\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":14,\"col_count\":6,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Before Perturb\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"After Perturb\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"ALL\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"SEQ\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL_d\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"VP\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":14,\"col_count\":6,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Before Perturb\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"After Perturb\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"ALL\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"SEQ\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL_d\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"ALL\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"VP\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 667,
+      "file_name": "069.pdf",
+      "question_type": "thinking",
+      "question": "请找出表中 VP 最高的模型。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "TAPASBASE inter"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "TAPASLARGE"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "TapasLarge"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "TapasLarge"
+        }
+      }
+    },
+    {
+      "id": 669,
+      "file_name": "070.pdf",
+      "question_type": "structure",
+      "question": "请恢复 70.pdf 中“Table II real-time stereo matching methods”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":2,\"col_count\":5,\"cells\":[{\"text\":\"Method\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPU\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"MDE/s¹\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"FPS²\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Error³\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":9,\"col_count\":5,\"cells\":[{\"text\":\"Method\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPU\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"MDE/s1\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"FPS2\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Error3\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":9,\"col_count\":5,\"cells\":[{\"text\":\"Method\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPU\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"MDE/s¹\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"FPS²\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Error³\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":9,\"col_count\":5,\"cells\":[{\"text\":\"Method\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"GPU\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"MDE/s¹\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"FPS²\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Error³\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 679,
+      "file_name": "071.pdf",
+      "question_type": "structure",
+      "question": "请恢复 71.pdf 中“表1 工业纯钛、α型和近α型钛合金牌号和化学成分”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":32,\"col_count\":24,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":3,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":22},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":16},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":18,\"rowspan\":1,\"colspan\":6},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ni\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cu\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ru\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ta\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nd\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":20,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":21,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":22,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他元素单一总和\",\"row\":2,\"col\":23,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":25,\"col_count\":23,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分（质量分数）/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":21},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":14},{\"text\":\"杂质，不大于\",\"row\":1,\"col\":16,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ni\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cu\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ta\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nd\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":20,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":21,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":21,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":22,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":32,\"col_count\":24,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":3,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":22},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":16},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":18,\"rowspan\":1,\"colspan\":6},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ni\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cu\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ru\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"Ta\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nd\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":20,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":21,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":22,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他元素单一总和\",\"row\":2,\"col\":23,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":39,\"col_count\":25,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":23},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":16},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":18,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mn\",\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"Ni\",\"row\":2,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"Cu\",\"row\":2,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":10,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Ru\",\"row\":2,\"col\":13,\"rowspan\":2,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":14,\"rowspan\":2,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":15,\"rowspan\":2,\"colspan\":1},{\"text\":\"Ta\",\"row\":2,\"col\":16,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nd\",\"row\":2,\"col\":17,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":18,\"rowspan\":2,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":19,\"rowspan\":2,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":20,\"rowspan\":2,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":21,\"rowspan\":2,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":22,\"rowspan\":2,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":23,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":23,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":24,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 683,
+      "file_name": "071.pdf",
+      "question_type": "extract",
+      "question": "请从 71.pdf 的“表1 工业纯钛、α型和近α型钛合金牌号和化学成分”中提取：TA11 的名义化学成分。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Al: 2.0～3.0, Mo: 1.0～2.0, Nb: 0.5～1.5"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Ti-6.5Al-4.5Sn-2Zr-1Mo-1Nd-0.25Si"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Ti-8Al-1Mo-1V"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Ti-8Al-1Mo-1V"
+        }
+      }
+    },
+    {
+      "id": 684,
+      "file_name": "071.pdf",
+      "question_type": "extract",
+      "question": "请从 71.pdf 的“表1 工业纯钛、α型和近α型钛合金牌号和化学成分”中提取：TA14 的 Zr 范围。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "0.6~1.2"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "0.5~1.5"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "1.5~2.5"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "4.0~6.0"
+        }
+      }
+    },
+    {
+      "id": 688,
+      "file_name": "071.pdf",
+      "question_type": "thinking",
+      "question": "请找出该页表头中横跨 Fe、C、N、H、O 的上级栏目名称。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "主要成分"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "杂质-不大于"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "杂质，不大于"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "杂质,不大于"
+        }
+      }
+    },
+    {
+      "id": 689,
+      "file_name": "072.pdf",
+      "question_type": "structure",
+      "question": "请恢复 72.pdf 中“表1（续）和表2 β型和近β型钛合金牌号及化学成分”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":21,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":3,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":3,\"colspan\":1},{\"text\":\"化学成分（质量分数）/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质:不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":5},{\"text\":\"其他元素\",\"row\":1,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"单一\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":21,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":21,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":2,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":2,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":2,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":2,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":2,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":2,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 694,
+      "file_name": "072.pdf",
+      "question_type": "extract",
+      "question": "请从 72.pdf 的“表1（续）和表2 β型和近β型钛合金牌号及化学成分”中提取：TB2 的名义化学成分。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "余量"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Ti-5Mo-5V-8Cr-3Al"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Ti-5Mo-5V-8Cr-5Al"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Ti-5Mo-5V-8Cr-3Al"
+        }
+      }
+    },
+    {
+      "id": 695,
+      "file_name": "072.pdf",
+      "question_type": "extract",
+      "question": "请从 72.pdf 的“表1（续）和表2 β型和近β型钛合金牌号及化学成分”中提取：TB4 的 Al 范围。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "2.5～3.5"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "4.5～5.5"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "3.0~4.5"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "3.0～4.5"
+        }
+      }
+    },
+    {
+      "id": 699,
+      "file_name": "073.pdf",
+      "question_type": "structure",
+      "question": "请恢复 73.pdf 中“表2（续）”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":18,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":3,\"colspan\":1},{\"text\":\"主要成分\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":14},{\"text\":\"杂质，不大于\",\"row\":0,\"col\":16,\"rowspan\":1,\"colspan\":2},{\"text\":\"Ti\",\"row\":1,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Al\",\"row\":1,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Si\",\"row\":1,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"V\",\"row\":1,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"Cr\",\"row\":1,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":1,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"Zr\",\"row\":1,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nb\",\"row\":1,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mo\",\"row\":1,\"col\":10,\"rowspan\":2,\"colspan\":1},{\"text\":\"Pd\",\"row\":1,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Sn\",\"row\":1,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":1,\"col\":13,\"rowspan\":2,\"colspan\":1},{\"text\":\"C\",\"row\":1,\"col\":14,\"rowspan\":2,\"colspan\":1},{\"text\":\"N\",\"row\":1,\"col\":15,\"rowspan\":2,\"colspan\":1},{\"text\":\"H\",\"row\":1,\"col\":16,\"rowspan\":2,\"colspan\":1},{\"text\":\"O\",\"row\":1,\"col\":17,\"rowspan\":2,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"单一\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":3,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":5},{\"text\":\"其他元素\",\"row\":1,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":1,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":1,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":1,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":1,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":1,\"colspan\":1},{\"text\":\"单一\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":17,\"col_count\":21,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分（质量分数）/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":19},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":12},{\"text\":\"杂质，不大于\",\"row\":1,\"col\":14,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mn\",\"row\":2,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":10,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":13,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":14,\"rowspan\":2,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":15,\"rowspan\":2,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":16,\"rowspan\":2,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":17,\"rowspan\":2,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":18,\"rowspan\":2,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":19,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":19,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":20,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":18,\"col_count\":20,\"cells\":[{\"text\":\"合金牌号\",\"row\":0,\"col\":0,\"rowspan\":4,\"colspan\":1},{\"text\":\"名义化学成分\",\"row\":0,\"col\":1,\"rowspan\":4,\"colspan\":1},{\"text\":\"化学成分(质量分数)/%\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":18},{\"text\":\"主要成分\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"杂质,不大于\",\"row\":1,\"col\":13,\"rowspan\":1,\"colspan\":7},{\"text\":\"Ti\",\"row\":2,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Al\",\"row\":2,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Si\",\"row\":2,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"V\",\"row\":2,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"Cr\",\"row\":2,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"Zr\",\"row\":2,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"Nb\",\"row\":2,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"Mo\",\"row\":2,\"col\":10,\"rowspan\":2,\"colspan\":1},{\"text\":\"Pd\",\"row\":2,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Sn\",\"row\":2,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fe\",\"row\":2,\"col\":13,\"rowspan\":2,\"colspan\":1},{\"text\":\"C\",\"row\":2,\"col\":14,\"rowspan\":2,\"colspan\":1},{\"text\":\"N\",\"row\":2,\"col\":15,\"rowspan\":2,\"colspan\":1},{\"text\":\"H\",\"row\":2,\"col\":16,\"rowspan\":2,\"colspan\":1},{\"text\":\"O\",\"row\":2,\"col\":17,\"rowspan\":2,\"colspan\":1},{\"text\":\"其他元素\",\"row\":2,\"col\":18,\"rowspan\":1,\"colspan\":2},{\"text\":\"单一\",\"row\":3,\"col\":18,\"rowspan\":1,\"colspan\":1},{\"text\":\"总和\",\"row\":3,\"col\":19,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 701,
+      "file_name": "073.pdf",
+      "question_type": "extract",
+      "question": "请从 73.pdf 的“表2（续）”中TB6的铁含量是多少。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "0.25"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "1.8~2.2"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "1.8~2.8"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "1.6～2.2"
+        }
+      }
+    },
+    {
+      "id": 702,
+      "file_name": "073.pdf",
+      "question_type": "extract",
+      "question": "请从 73.pdf 的“表2（续）”中那种合金的杂质含量最多",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "TC17"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "TB9"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "TB8"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "TB8"
+        }
+      }
+    },
+    {
+      "id": 704,
+      "file_name": "073.pdf",
+      "question_type": "extract",
+      "question": "请从 73.pdf 的“表2（续）”中提取：表格中的 Al 列单元格内容。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"2.5～3.5\",\"2.6～3.4\",\"—\",\"2.5～3.5\",\"3.0～4.0\",\"2.5～3.5\",\"—\",\"3.0～4.5\",\"3.5～4.5\",\"—\",\"余量\",\"余量\",\"—\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\",\"余量\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"2.5~3.5\",\"2.8~3.4\",\"—\",\"2.5~3.5\",\"3.0~4.0\",\"2.5~3.5\",\"余量\",\"—\",\"3.0~4.5\",\"—\",\"3.5~4.5\",\"2.5~3.5\",\"3.5~4.5\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"2.5～3.5\",\"2.6～3.4\",\"—\",\"2.5～3.5\",\"3.0～4.0\",\"2.5～3.5\",\"—\",\"—\",\"3.0～4.5\",\"—\",\"3.5～4.5\",\"2.5～3.5\",\"3.5～4.5\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"2.5~3.5\",\"2.6~3.4\",\"—\",\"2.5~3.5\",\"3.0~4.0\",\"2.5~3.5\",\"—\",\"—\",\"3.0~4.5\",\"—\",\"3.5~4.5\",\"2.5~3.5\",\"3.5~5.5\"]"
+        }
+      }
+    },
+    {
+      "id": 705,
+      "file_name": "073.pdf",
+      "question_type": "extract",
+      "question": "请从 73.pdf 的““表2（续）”中Mo元素含量大于 0.5 的有多少个?",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "2"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "8"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "7"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "8"
+        }
+      }
+    },
+    {
+      "id": 708,
+      "file_name": "073.pdf",
+      "question_type": "thinking",
+      "question": "请从 73.pdf 的““表2（续）”中TB14中含量最多的元素？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Al"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Ti"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Nb"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Ti"
+        }
+      }
+    },
+    {
+      "id": 719,
+      "file_name": "075.jpg",
+      "question_type": "structure",
+      "question": "请恢复 75.jpg 中“Pro Forma Capitalization Table”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":10,\"cells\":[{\"text\":\"Common Stock\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":4},{\"text\":\"Investor Rounds\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"Exit\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":2},{\"text\":\"Founders' Shares\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Stock Options\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":2},{\"text\":\"$\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Round 1\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"$\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Round 2\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":2},{\"text\":\"Shares\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":25,\"col_count\":13,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"Common Stock\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"Investor Rounds\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":6},{\"text\":\"Exit\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":2},{\"text\":\"Founders' Shares\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Stock Options\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"Round 1\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"Round 2\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"$20,000,000\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Multiple\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":33,\"col_count\":13,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Common Stock\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"Investor Rounds\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":6},{\"text\":\"Exit\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":2},{\"text\":\"Founders' Shares\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Stock Options\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"Round 1\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"Round 2\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"$20000000\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Multiple\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"Common\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":20,\"col_count\":13,\"cells\":[{\"text\":\"Common\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"Common Stock\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"Investor Rounds\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":6},{\"text\":\"Exit\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":2},{\"text\":\"Founders' Shares\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Stock Options\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"Round 1\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"Round 2\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"$20000000\",\"row\":1,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"Multiple\",\"row\":1,\"col\":12,\"rowspan\":2,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Shares\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"%\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 729,
+      "file_name": "076.jpg",
+      "question_type": "structure",
+      "question": "请恢复 76.jpg 中“Simple Income Statement”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":2,\"col_count\":2,\"cells\":[{\"text\":\"Income Statement:\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year 1\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":35,\"col_count\":3,\"cells\":[{\"text\":\"Income Statement:\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":3},{\"text\":\"Revenue:\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year 1\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":27,\"col_count\":2,\"cells\":[{\"text\":\"Income Statement:\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Revenue:\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year 1\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":27,\"col_count\":2,\"cells\":[{\"text\":\"Income Statement:\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Revenue:\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year 1\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 739,
+      "file_name": "077.pdf",
+      "question_type": "structure",
+      "question": "请恢复 77.pdf 中“Monster Beverage consolidated financial statements”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":4,\"cells\":[{\"text\":\"MONSTER BEVERAGE CORPORATION AND SUBSIDIARIES CONSOLIDATED BALANCE SHEETS AS OF DECEMBER 31, 2021 AND 2020 (In Thousands, Except Par Value)\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":4},{\"text\":\"December 31, 2021\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"December 31, 2020\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"ASSETS\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":16,\"col_count\":4,\"cells\":[{\"text\":\"2021\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2020\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"2019\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":37,\"col_count\":3,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"December 31, 2021\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"December 31, 2020\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":37,\"col_count\":3,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"December 31, 2021\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"December 31, 2020\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 759,
+      "file_name": "079.png",
+      "question_type": "structure",
+      "question": "请恢复 79.png 中“Amazon consolidated statements of cash flows”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":4,\"cells\":[{\"text\":\"Year Ended December 31,\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"2015\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2016\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"2017\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":2,\"col_count\":4,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Year Ended December 31,\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"2015\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2016\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"2017\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":40,\"col_count\":4,\"cells\":[{\"text\":\"Year Ended December 31,\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"2015\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2016\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"2017\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":40,\"col_count\":4,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year Ended December 31,\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":3},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2015\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2016\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"2017\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 768,
+      "file_name": "079.png",
+      "question_type": "thinking",
+      "question": "请计算 2017 Sales and maturities of marketable securities 减 Purchases of marketable securities。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "-3779"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "-3789"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "23765"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "-3789"
+        }
+      }
+    },
+    {
+      "id": 769,
+      "file_name": "080.png",
+      "question_type": "thinking",
+      "question": "请恢复 80.png 中 Balance 表的 Cash 行，对应在 CashFlow 表的哪一行？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "1"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Closing Cash Balance"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "15"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "181210"
+        }
+      }
+    },
+    {
+      "id": 779,
+      "file_name": "081.png",
+      "question_type": "structure",
+      "question": "请恢复 81.png 中“School board classes table”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":2,\"col_count\":3,\"cells\":[{\"text\":\"SCHOOL\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"BOARD\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASSES\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":3,\"col_count\":3,\"cells\":[{\"text\":\"SCHOOL\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"BOARD\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASSES\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":8,\"col_count\":5,\"cells\":[{\"text\":\"SCHOOL\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"BOARD\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASSES\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":3},{\"text\":\"CLASS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STRENGTH\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"SPORTS\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASS\",\"row\":4,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STRENGTH\",\"row\":4,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"SPORTS\",\"row\":4,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":8,\"col_count\":5,\"cells\":[{\"text\":\"SCHOOL\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"BOARD\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASSES\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":3},{\"text\":\"CLASS\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STRENGTH\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"SPORTS\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"CLASS\",\"row\":4,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STRENGTH\",\"row\":4,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"SPORTS\",\"row\":4,\"col\":4,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 789,
+      "file_name": "082.png",
+      "question_type": "structure",
+      "question": "请恢复 82.png 中“表1-2 分部分项工程量清单及计价表（号清单）”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":3,\"col_count\":12,\"cells\":[{\"text\":\"序号\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"项目编码\",\"row\":0,\"col\":1,\"rowspan\":3,\"colspan\":1},{\"text\":\"项目名称\",\"row\":0,\"col\":2,\"rowspan\":3,\"colspan\":1},{\"text\":\"项目特征描述\",\"row\":0,\"col\":3,\"rowspan\":3,\"colspan\":1},{\"text\":\"计量单位\",\"row\":0,\"col\":4,\"rowspan\":3,\"colspan\":1},{\"text\":\"工程量\",\"row\":0,\"col\":5,\"rowspan\":3,\"colspan\":1},{\"text\":\"综合单价(元)\",\"row\":0,\"col\":6,\"rowspan\":3,\"colspan\":1},{\"text\":\"合价(元)\",\"row\":0,\"col\":7,\"rowspan\":3,\"colspan\":1},{\"text\":\"其中\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"备注\",\"row\":0,\"col\":11,\"rowspan\":3,\"colspan\":1},{\"text\":\"人工费\",\"row\":1,\"col\":8,\"rowspan\":2,\"colspan\":1},{\"text\":\"机械费\",\"row\":1,\"col\":9,\"rowspan\":2,\"colspan\":1},{\"text\":\"管理费\",\"row\":1,\"col\":10,\"rowspan\":2,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":2,\"col_count\":12,\"cells\":[{\"text\":\"序号\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目编码\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目名称\",\"row\":0,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目特征描述\",\"row\":0,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"计量单位\",\"row\":0,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"工程量\",\"row\":0,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"综合单价(元)\",\"row\":0,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"合价(元)\",\"row\":0,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"其中\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"备注\",\"row\":0,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"人工费\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"机械费\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"管理费\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":8,\"col_count\":12,\"cells\":[{\"text\":\"序号\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目编码\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目名称\",\"row\":0,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目特征描述\",\"row\":0,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"计量单位\",\"row\":0,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"工程量\",\"row\":0,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"综合单价(元)\",\"row\":0,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"合价(元)\",\"row\":0,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"其中\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"备注\",\"row\":0,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"人工费\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"机械费\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"管理费\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":8,\"col_count\":12,\"cells\":[{\"text\":\"序号\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目编码\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目名称\",\"row\":0,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"项目特征描述\",\"row\":0,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"计量单位\",\"row\":0,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"工程量\",\"row\":0,\"col\":5,\"rowspan\":2,\"colspan\":1},{\"text\":\"综合单价(元)\",\"row\":0,\"col\":6,\"rowspan\":2,\"colspan\":1},{\"text\":\"合价(元)\",\"row\":0,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"其中\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":3},{\"text\":\"备注\",\"row\":0,\"col\":11,\"rowspan\":2,\"colspan\":1},{\"text\":\"人工费\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"机械费\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"管理费\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 790,
+      "file_name": "082.png",
+      "question_type": "extract",
+      "question": "请从 82.png 的“表1-2 分部分项工程量清单及计价表（号清单）”中提取：表格标题。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "表1-2 分部分项工程量清单及计价表（号清单）"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "表1-2 分部分项工程量清单及计价表（ 号清单）"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "表1-2 分部分项工程量清单及计价表(号清单)"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "表1-2 分部分项工程量清单及计价表（号清单）"
+        }
+      }
+    },
+    {
+      "id": 796,
+      "file_name": "082.png",
+      "question_type": "thinking",
+      "question": "请计算序号24、25、26、27 四行合价合计。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "10260"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "12786"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "12586"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "12786"
+        }
+      }
+    },
+    {
+      "id": 799,
+      "file_name": "083.png",
+      "question_type": "structure",
+      "question": "请恢复 83.png 中“The Error Rate on Different Forms”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":9,\"col_count\":7,\"cells\":[{\"text\":\"Form name\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"A\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"B\",\"row\":0,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Total fields (X = A × B)\",\"row\":0,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fields with errors (Y)\",\"row\":0,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"Error rate* (Y/X) × 100 (%)\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"X/Y\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"%age\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":3,\"col_count\":7,\"cells\":[{\"text\":\"The Error Rate on Different Forms\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":7},{\"text\":\"Form name\",\"row\":1,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"A\",\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"B\",\"row\":1,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Total fields (X = A × B)\",\"row\":1,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fields with errors (Y)\",\"row\":1,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"Error rate (Y/X) × 100 (%)\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"X/Y\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"%age\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":11,\"col_count\":7,\"cells\":[{\"text\":\"Form name\",\"row\":1,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"A\",\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"B\",\"row\":1,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Total fields (X = A × B)\",\"row\":1,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fields with errors (Y)\",\"row\":1,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"Error rate* (Y/X) × 100 (%)\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"X/Y\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"%age\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":12,\"col_count\":7,\"cells\":[{\"text\":\"Form name\",\"row\":1,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"A\",\"row\":1,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"B\",\"row\":1,\"col\":2,\"rowspan\":2,\"colspan\":1},{\"text\":\"Total fields (X = A × B)\",\"row\":1,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"Fields with errors (Y)\",\"row\":1,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"Error rate* (Y/X) × 100 (%)\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"X/Y\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"%age\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 809,
+      "file_name": "084.png",
+      "question_type": "structure",
+      "question": "请恢复 84.png 中“Catalog of chemicals”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":15,\"col_count\":12,\"cells\":[{\"text\":\"Chemical name\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"International number\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Vendor\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Resistance index\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Density\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Viscosity\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Freezing point\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Packaging\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pack size\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Unit\",\"row\":0,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Price\",\"row\":0,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Last update\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":2,\"col_count\":13,\"cells\":[{\"text\":\"Chemical name\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"International number\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Vendor\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Resistance index\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Density\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Viscosity\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Freezing point\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Packaging\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pack size\",\"row\":0,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Unit\",\"row\":0,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Price\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Last update\",\"row\":0,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"g/m³\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"m²/s\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"°C\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"$\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":16,\"col_count\":13,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Chemical name\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"International number\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Vendor\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Resistance index\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Density g/m³\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Viscosity m²/s\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Freezing point °C\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Packaging\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pack size\",\"row\":0,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Unit\",\"row\":0,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Price $\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Last update\",\"row\":0,\"col\":12,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":17,\"col_count\":13,\"cells\":[{\"text\":\"\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Chemical name\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"International number\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Vendor\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Resistance index\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Density g/m³\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"Viscosity m²/s\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"Freezing point °C\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Packaging\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Pack size\",\"row\":0,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"Unit\",\"row\":0,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"Price $\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Last update\",\"row\":0,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"All\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"< 1\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"All\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"All\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"All\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"All\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":12,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 817,
+      "file_name": "084.png",
+      "question_type": "thinking",
+      "question": "请找出可见行中 Resistance index 最高的化学品。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Caustic Potash"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Stearalkonium Chloride"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"Stearalkonium Chloride\",\"Guar Gum\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"Stearalkonium Chloride\",\"Guar Gum\"]"
+        }
+      }
+    },
+    {
+      "id": 849,
+      "file_name": "088.png",
+      "question_type": "structure",
+      "question": "请恢复 88.png 中“Games by Continent”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":7,\"col_count\":10,\"cells\":[{\"text\":\"Games by Continent\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":10},{\"text\":\"Place\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"Dates\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":4},{\"text\":\"Season\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Number\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Flag\",\"row\":3,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"City\",\"row\":3,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Country\",\"row\":3,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year\",\"row\":3,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"From\",\"row\":3,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"To\",\"row\":3,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Status\",\"row\":3,\"col\":8,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":10,\"col_count\":9,\"cells\":[{\"text\":\"Games by Continent\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":9},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Place\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":4},{\"text\":\"Dates\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":10,\"col_count\":9,\"cells\":[{\"text\":\"Games by Continent\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":9},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Place\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":3},{\"text\":\"Dates\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Season\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Number\",\"row\":6,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Flag\",\"row\":6,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"City\",\"row\":6,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Country\",\"row\":6,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year\",\"row\":6,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"From\",\"row\":6,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"To\",\"row\":6,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Status\",\"row\":6,\"col\":8,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":10,\"col_count\":9,\"cells\":[{\"text\":\"Games by Continent\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":9},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Place\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":3},{\"text\":\"Dates\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":3},{\"text\":\"\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"Season\",\"row\":6,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Number\",\"row\":6,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Flag\",\"row\":6,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"City\",\"row\":6,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"Country\",\"row\":6,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"Year\",\"row\":6,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"From\",\"row\":6,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"To\",\"row\":6,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"Status\",\"row\":6,\"col\":8,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 859,
+      "file_name": "089.png",
+      "question_type": "thinking",
+      "question": "请恢复 89.png 中红色的方块一共有多少个？",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":18,\"col_count\":6,\"cells\":[{\"text\":\"1\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"2\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"3\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"4\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":4},{\"text\":\"\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"5\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":3,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":3,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"6\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":4,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":4,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":4,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"7\",\"row\":5,\"col\":0,\"rowspan\":3,\"colspan\":2},{\"text\":\"9\",\"row\":5,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":5,\"col\":3,\"rowspan\":2,\"colspan\":3},{\"text\":\"10\",\"row\":6,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"11\",\"row\":7,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"12\",\"row\":7,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":7,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":7,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"13\",\"row\":8,\"col\":0,\"rowspan\":5,\"colspan\":3},{\"text\":\"\",\"row\":8,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":8,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"14\",\"row\":9,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":9,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"15\",\"row\":10,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":10,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"16\",\"row\":11,\"col\":3,\"rowspan\":2,\"colspan\":2},{\"text\":\"\",\"row\":11,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"17\",\"row\":12,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":12,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":12,\"col\":3,\"rowspan\":1,\"colspan\":2},{\"text\":\"18\",\"row\":13,\"col\":0,\"rowspan\":1,\"colspan\":6}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":18,\"col_count\":8,\"cells\":[{\"text\":\"1\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":4,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"3\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"4\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":4},{\"text\":\"\",\"row\":2,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"5\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":3,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":3,\"col\":4,\"rowspan\":1,\"colspan\":3},{\"text\":\"6\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":4,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":4,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"7\",\"row\":5,\"col\":0,\"rowspan\":5,\"colspan\":1},{\"text\":\"\",\"row\":5,\"col\":1,\"rowspan\":3,\"colspan\":2},{\"text\":\"\",\"row\":5,\"col\":3,\"rowspan\":3,\"colspan\":5},{\"text\":\"9\",\"row\":8,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":8,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":8,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":8,\"col\":4,\"rowspan\":2,\"colspan\":4},{\"text\":\"10\",\"row\":9,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":9,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"11\",\"row\":10,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":10,\"col\":1,\"rowspan\":1,\"colspan\":5},{\"text\":\"\",\"row\":10,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":10,\"col\":7,\"rowspan\":2,\"colspan\":1},{\"text\":\"12\",\"row\":11,\"col\":0,\"rowspan\":1,\"colspan\":3},{\"text\":\"\",\"row\":11,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":11,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":11,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"13\",\"row\":12,\"col\":0,\"rowspan\":4,\"colspan\":3},{\"text\":\"\",\"row\":12,\"col\":4,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":12,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":12,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"14\",\"row\":13,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":13,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"15\",\"row\":14,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":14,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"16\",\"row\":15,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":15,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"17\",\"row\":16,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":16,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":16,\"col\":4,\"rowspan\":1,\"colspan\":4},{\"text\":\"18\",\"row\":17,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":17,\"col\":1,\"rowspan\":1,\"colspan\":7}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":17,\"col_count\":7,\"cells\":[{\"text\":\"1\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":0,\"col\":4,\"rowspan\":3,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"8\",\"row\":7,\"col\":3,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":7,\"col\":4,\"rowspan\":2,\"colspan\":3},{\"text\":\"15\",\"row\":13,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":13,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":13,\"col\":5,\"rowspan\":2,\"colspan\":2}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":18,\"col_count\":7,\"cells\":[{\"text\":\"1\",\"row\":0,\"col\":0,\"rowspan\":3,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":1,\"rowspan\":2,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":2},{\"text\":\"\",\"row\":0,\"col\":4,\"rowspan\":3,\"colspan\":1},{\"text\":\"\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":2},{\"text\":\"8\",\"row\":8,\"col\":3,\"rowspan\":3,\"colspan\":1},{\"text\":\"\",\"row\":8,\"col\":4,\"rowspan\":3,\"colspan\":3},{\"text\":\"15\",\"row\":15,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":15,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":15,\"col\":5,\"rowspan\":2,\"colspan\":2}]}"
+        }
+      }
+    },
+    {
+      "id": 861,
+      "file_name": "089.png",
+      "question_type": "extract",
+      "question": "请从 89.png 的“colored merged-cell layout”中提取：黄色小块中位于上方的编号。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "2"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "3"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "10"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "9"
+        }
+      }
+    },
+    {
+      "id": 868,
+      "file_name": "089.png",
+      "question_type": "thinking",
+      "question": "请按从上到下列出最左列可见编号。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[1,4,5,6,7,11,13,17,18]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "[\"1\",\"4\",\"5\",\"6\",\"7\",\"11\",\"12\",\"13\",\"17\",\"18\"]"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[1,4,5,6,7,11,12,13,17,18]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[1,4,5,6,7,11,12,13,17,18]"
+        }
+      }
+    },
+    {
+      "id": 873,
+      "file_name": "090.png",
+      "question_type": "extract",
+      "question": "请从 90.png 的“merged-cell spreadsheet example”中提取：Row 7 蓝色区域显示的文本。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Row 6"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Row 7"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "ColumnSpan=\"2"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "ColumnSpan=\"2"
+        }
+      }
+    },
+    {
+      "id": 889,
+      "file_name": "092.jpg",
+      "question_type": "structure",
+      "question": "请恢复 92.jpg 中“Funnel management plan conversion rates”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":5,\"col_count\":12,\"cells\":[{\"text\":\"Account Manager\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2\",\"row\":0,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"3\",\"row\":0,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"4\",\"row\":0,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"5\",\"row\":0,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"6\",\"row\":0,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"7\",\"row\":0,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":0,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"9\",\"row\":0,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"10\",\"row\":0,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"11\",\"row\":0,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"ANNUAL TARGET\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"AVG CONTRACT VALUE (CURRENT AVG VALUE)\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"NO. OF CONTRACTS REQUIRED\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"TOTAL MEETINGS TO BE DONE PER MONTH\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"DISCUSSION TO PROPOSAL CONVERSION RATIO (CURRENT RATIO)\",\"row\":1,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"# PROPOSALS TO BE GENERATED PER MONTH\",\"row\":1,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"PIPELINE VALUE PER MONTH\",\"row\":1,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"PROPOSAL TO ORDERBOOK (CURRENT RATIO)\",\"row\":1,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"# CONTRACTS GENERATED PER MONTH\",\"row\":1,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"ORDER BOOK VALUE GENERATED PER MONTH\",\"row\":1,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"AVG TARGET PER MONTH\",\"row\":1,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"SHORTFALL / SURPLUS\",\"row\":1,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"DATA FROM\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"TARGET SHEET\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"APRIL TO JAN CONTRACT AVG\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 1 / STEP 2\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"ACCOUNT MANAGEMENT PLAN\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"YTD DAILY ACTIVITY REPORT (PROPOSAL / DISCUSSION %)\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 4 * STEP 5\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 6 * STEP 2\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"YTD DAILY ACTIVITY REPORT (PROPOSAL / BUSINESS GENERATED %)\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 6 * STEP 8\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 9 * STEP 2\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 11 / 12\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"2016-17\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"16000000\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"214500\",\"row\":3,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"75\",\"row\":3,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"19\",\"row\":3,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"13%\",\"row\":3,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"2\",\"row\":3,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"535113\",\"row\":3,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"42%\",\"row\":3,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"1.05\",\"row\":3,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"224426\",\"row\":3,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"1333333\",\"row\":3,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"Rework\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"16000000\",\"row\":4,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"500000\",\"row\":4,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"32\",\"row\":4,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"30\",\"row\":4,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"25%\",\"row\":4,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":4,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"3750000\",\"row\":4,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"90%\",\"row\":4,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"6.75\",\"row\":4,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"3375000\",\"row\":4,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"1333333\",\"row\":4,\"col\":11,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":3,\"col_count\":13,\"cells\":[{\"text\":\"FUNNEL MANAGEMENT PLAN BASED ON INDIVIDUAL CONVERSION RATES\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":13},{\"text\":\"Account Manager\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":2},{\"text\":\"Debjit Mukherjee\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":11},{\"text\":\"1\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"2\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"3\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"4\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"5\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"6\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"7\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"9\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"10\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"11\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"12\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": ""
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":11,\"col_count\":13,\"cells\":[{\"text\":\"FUNNEL MANAGEMENT PLAN BASED ON INDIVIDUAL CONVERSION RATES\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":13},{\"text\":\"Account Manager\",\"row\":1,\"col\":0,\"rowspan\":1,\"colspan\":3},{\"text\":\"Debajit Mukherjee\",\"row\":1,\"col\":3,\"rowspan\":1,\"colspan\":10},{\"text\":\"\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"1\",\"row\":2,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"2\",\"row\":2,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"3\",\"row\":2,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"4\",\"row\":2,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"5\",\"row\":2,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"6\",\"row\":2,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"7\",\"row\":2,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"8\",\"row\":2,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"9\",\"row\":2,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"10\",\"row\":2,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"11\",\"row\":2,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"12\",\"row\":2,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"\",\"row\":3,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"ANNUAL TARGET\",\"row\":3,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"AVG CONTRACT VALUE (CURRENT AVG VALUE)\",\"row\":3,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"NO. OF CONTRACTS REQUIRED\",\"row\":3,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"TOTAL MEETINGS TO BE DONE PER MONTH\",\"row\":3,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"DISCUSSION TO PROPOSAL CONVERSION RATIO (CURRENT RATIO)\",\"row\":3,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"# PROPOSALS TO BE GENERATED PER MONTH\",\"row\":3,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"PIPELINE VALUE PER MONTH\",\"row\":3,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"PROPOSAL TO ORDERBOOK (CURRENT RATIO)\",\"row\":3,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"# CONTRACTS GENERATED PER MONTH\",\"row\":3,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"ORDER BOOK VALUE GENERATED PER MONTH\",\"row\":3,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"AVG TARGET PER MONTH\",\"row\":3,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"SHORTFALL / SURPLUS\",\"row\":3,\"col\":12,\"rowspan\":1,\"colspan\":1},{\"text\":\"ANNUAL\",\"row\":4,\"col\":0,\"rowspan\":1,\"colspan\":13},{\"text\":\"DATA FROM\",\"row\":5,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"TARGET SHEET\",\"row\":5,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"APRIL TO JAN CONTRACT AVG\",\"row\":5,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 1 / STEP 2\",\"row\":5,\"col\":3,\"rowspan\":1,\"colspan\":1},{\"text\":\"ACCOUNT MANAGEMENT PLAN\",\"row\":5,\"col\":4,\"rowspan\":1,\"colspan\":1},{\"text\":\"YTD DAILY ACTIVITY REPORT (PROPOSAL / DISCUSSION %)\",\"row\":5,\"col\":5,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 4 * STEP 5\",\"row\":5,\"col\":6,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 6 * STEP 2\",\"row\":5,\"col\":7,\"rowspan\":1,\"colspan\":1},{\"text\":\"YTD DAILY ACTIVITY REPORT (PROPOSAL / BUSINESS GENERATED %)\",\"row\":5,\"col\":8,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 6 * STEP 8\",\"row\":5,\"col\":9,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 9 * STEP 2\",\"row\":5,\"col\":10,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 1 / 12\",\"row\":5,\"col\":11,\"rowspan\":1,\"colspan\":1},{\"text\":\"STEP 10- STEP 11\",\"row\":5,\"col\":12,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 890,
+      "file_name": "092.jpg",
+      "question_type": "extract",
+      "question": "请从 92.jpg 的“Funnel management plan conversion rates”中提取：Account Manager。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "Account Manager"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "Debash Mukherjee"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "Debajit Mukherjee"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "Debajit Mukherjee"
+        }
+      }
+    },
+    {
+      "id": 899,
+      "file_name": "093.jpg",
+      "question_type": "structure",
+      "question": "请恢复 93.jpg 中“ASCII Summary records table”的表头行结构。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "{\"row_count\":5,\"col_count\":3,\"cells\":[{\"text\":\"XXX\",\"row\":0,\"col\":0,\"rowspan\":1,\"colspan\":1},{\"text\":\"Summary\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Description\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Variable Names(units)\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Note: The following records relate to first pass\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":3}]}"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "{\"row_count\":6,\"col_count\":3,\"cells\":[{\"text\":\"XXX\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Summary\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Description\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Variable Names(units)\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Note: The following records relate to first pass\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":3}]}"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "{\"row_count\":5,\"col_count\":3,\"cells\":[{\"text\":\"XXX\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Summary\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Description\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Variable Names(units)\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1},{\"text\":\"Note: The following records relate to first pass\",\"row\":2,\"col\":0,\"rowspan\":1,\"colspan\":3}]}"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "{\"row_count\":5,\"col_count\":3,\"cells\":[{\"text\":\"XXX\",\"row\":0,\"col\":0,\"rowspan\":2,\"colspan\":1},{\"text\":\"Summary\",\"row\":0,\"col\":1,\"rowspan\":1,\"colspan\":2},{\"text\":\"Description\",\"row\":1,\"col\":1,\"rowspan\":1,\"colspan\":1},{\"text\":\"Variable Names(units)\",\"row\":1,\"col\":2,\"rowspan\":1,\"colspan\":1}]}"
+        }
+      }
+    },
+    {
+      "id": 903,
+      "file_name": "093.jpg",
+      "question_type": "extract",
+      "question": "请从 93.jpg 的“ASCII Summary records table”中提取：RECORDS 下 basic structure 的变量名。",
+      "bucket": "split",
+      "answers": {
+        "vl": {
+          "model": "qwen3-vl-plus",
+          "answer": "[\"NNN\",\"NNN1\",\"NNN2\",\"NNNNN2\",\"XYZDDD\",\"SOURCE\",\"TARGET\"]"
+        },
+        "flash": {
+          "model": "qwen3.8-flash",
+          "answer": "NNN, NNN1, NNN2, NNNNNNN2, XYZDDD, SOURCE, TARGET"
+        },
+        "max": {
+          "model": "qwen3.8-max-0902",
+          "answer": "[\"NNN\",\"NNN1\",\"NNN2\",\"NNNNNN2\",\"XYZDDD\",\"SOURCE\",\"TARGET\"]"
+        },
+        "retry": {
+          "model": "qwen3.8-Max-split-retry",
+          "answer": "[\"NNN\",\"NNN1\",\"NNN2\",\"NNNNNN2\",\"XYZDDD\",\"SOURCE\",\"TARGET\"]"
+        }
+      }
+    }
+  ]
+}

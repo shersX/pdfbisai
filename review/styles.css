@@ -11,6 +11,7 @@
   --vl: #8b9cff;
   --flash: #5ec8d8;
   --max: #f0a56e;
+  --retry: #c58bff;
 }
 
 * { box-sizing: border-box; }
@@ -196,6 +197,7 @@ html, body {
 .model-key.vl { color: var(--vl); }
 .model-key.flash { color: var(--flash); }
 .model-key.max { color: var(--max); }
+.model-key.retry { color: var(--retry); }
 
 .model-name {
   margin-top: 4px;
@@ -230,6 +232,7 @@ html, body {
 .pick.vl { background: #2a3358; border-color: #3d4a7a; }
 .pick.flash { background: #1f4450; border-color: #2f6573; }
 .pick.max { background: #4a3424; border-color: #6e4c32; }
+.pick.retry { background: #3a2a52; border-color: #5a3d7a; }
 .pick.active { outline: 2px solid var(--ok); }
 
 .empty {

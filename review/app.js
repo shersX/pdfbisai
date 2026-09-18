@@ -1,9 +1,16 @@
 (() => {
-  const CHOICES = ["vl", "flash", "max"];
+  const DEFAULT_CHOICES = ["vl", "flash", "max"];
+  const CHOICE_LABEL = {
+    vl: "vl",
+    flash: "flash",
+    max: "max",
+    retry: "retry",
+  };
 
   const state = {
     questions: [],
     decisions: {},
+    choices: DEFAULT_CHOICES.slice(),
     filter: "pending",
     index: 0,
   };
@@ -16,6 +23,7 @@
     filterLabel: document.getElementById("filterLabel"),
     btnPrev: document.getElementById("btnPrev"),
     btnNext: document.getElementById("btnNext"),
+    footer: document.getElementById("footerHint"),
   };
 
   function escapeHtml(s) {
@@ -87,8 +95,8 @@
   }
 
   /** @returns {{ pairs: string[][], sameKeys: Set<string>, label: string }} */
-  function majorityInfo(q) {
-    const keys = CHOICES.filter((k) => String(q.answers?.[k]?.answer ?? "").trim() !== "");
+  function compareInfo(q) {
+    const keys = state.choices.filter((k) => String(q.answers?.[k]?.answer ?? "").trim() !== "");
     const pairs = [];
     for (let i = 0; i < keys.length; i++) {
       for (let j = i + 1; j < keys.length; j++) {
@@ -98,15 +106,16 @@
       }
     }
     const sameKeys = new Set(pairs.flat());
-    let label = "三方内容均不同";
+    const n = state.choices.length;
+    let label = `${n} 方内容均不同`;
     if (keys.length < 2) {
       label = "有效答案不足，无法比较";
-    } else if (pairs.length === 3 || (keys.length === 3 && sameKeys.size === 3)) {
-      label = "三方内容相同（含数值格式归一）";
+    } else if (sameKeys.size === keys.length && pairs.length >= keys.length - 1) {
+      label = `${keys.length} 方内容相同（含数值格式归一）`;
     } else if (pairs.length === 1) {
       const [x, y] = pairs[0];
-      const lone = CHOICES.find((k) => k !== x && k !== y);
-      label = `多数：${x} 与 ${y} 相同（2:1），${lone} 不同`;
+      const others = keys.filter((k) => k !== x && k !== y).join("/");
+      label = `${x} 与 ${y} 相同，其余不同${others ? `（${others}）` : ""}`;
     } else if (pairs.length > 1) {
       label = `相同组合：${pairs.map(([x, y]) => `${x}=${y}`).join("；")}`;
     }
@@ -148,6 +157,11 @@
 
     el.btnPrev.disabled = !list.length || state.index <= 0;
     el.btnNext.disabled = !list.length || state.index >= list.length - 1;
+
+    if (el.footer) {
+      const keys = state.choices.map((k, i) => `${i + 1}=${CHOICE_LABEL[k] || k}`).join("　");
+      el.footer.textContent = `快捷键：${keys}　←上一项　→下一项　判定后自动跳到下一未审题`;
+    }
   }
 
   function render() {
@@ -159,22 +173,22 @@
     }
 
     const decision = state.decisions[String(q.id)];
-    const info = majorityInfo(q);
+    const info = compareInfo(q);
     const tipClass =
       info.sameKeys.size >= 2 && info.pairs.length === 1
         ? "tip-majority"
-        : info.sameKeys.size === 3
+        : info.sameKeys.size >= state.choices.length
           ? "tip-same"
           : "tip-split";
 
-    const rows = CHOICES.map((key) => {
+    const rows = state.choices.map((key) => {
       const item = q.answers[key] || { model: key, answer: "" };
       const selected = decision && decision.choice === key;
-      const inMajority = info.sameKeys.has(key) && info.pairs.length === 1;
+      const inPair = info.sameKeys.has(key) && info.pairs.length >= 1;
       const rowClass = [
         selected ? "selected" : "",
-        inMajority ? "same-majority" : "",
-        info.sameKeys.size === 3 ? "same-all" : "",
+        inPair && info.pairs.length === 1 ? "same-majority" : "",
+        info.sameKeys.size >= state.choices.length ? "same-all" : "",
       ]
         .filter(Boolean)
         .join(" ");
@@ -185,14 +199,14 @@
           <td class="col-type">${escapeHtml(q.question_type)}</td>
           <td class="col-question">${escapeHtml(q.question)}</td>
           <td class="col-model">
-            <span class="model-key ${key}">${key}</span>
-            ${inMajority ? '<span class="badge-same">相同多数</span>' : ""}
+            <span class="model-key ${key}">${CHOICE_LABEL[key] || key}</span>
+            ${inPair && info.pairs.length === 1 ? '<span class="badge-same">相同</span>' : ""}
             <div class="model-name">${escapeHtml(item.model || "")}</div>
           </td>
           <td class="col-answer"><pre>${escapeHtml(item.answer || "")}</pre></td>
           <td class="col-action">
             <button type="button" class="pick ${key} ${selected ? "active" : ""}" data-choice="${key}">
-              选 ${key}${selected ? " ✓" : ""}
+              选 ${CHOICE_LABEL[key] || key}${selected ? " ✓" : ""}
             </button>
           </td>
         </tr>`;
@@ -225,7 +239,7 @@
 
   async function choose(choice) {
     const q = currentQuestion();
-    if (!q || !CHOICES.includes(choice)) return;
+    if (!q || !state.choices.includes(choice)) return;
 
     const res = await fetch("/api/decisions", {
       method: "POST",
@@ -266,6 +280,18 @@
     }
   }
 
+  function inferChoices(qData) {
+    if (Array.isArray(qData.choices) && qData.choices.length) {
+      return qData.choices.slice();
+    }
+    const first = (qData.questions || [])[0];
+    if (first && first.answers) {
+      const order = ["vl", "flash", "max", "retry"];
+      return order.filter((k) => k in first.answers);
+    }
+    return DEFAULT_CHOICES.slice();
+  }
+
   async function boot() {
     const [qRes, dRes] = await Promise.all([
       fetch("/api/questions"),
@@ -278,8 +304,10 @@
       return;
     }
     state.questions = qData.questions || [];
+    state.choices = inferChoices(qData);
     state.decisions = dData || {};
     state.index = 0;
+    document.title = state.choices.includes("retry") ? "分歧四轮审核" : "多数/分歧题审核";
     render();
   }
 
@@ -293,10 +321,12 @@
 
   window.addEventListener("keydown", (e) => {
     if (e.target && ["INPUT", "TEXTAREA", "SELECT"].includes(e.target.tagName)) return;
-    if (e.key === "1") choose("vl");
-    else if (e.key === "2") choose("flash");
-    else if (e.key === "3") choose("max");
-    else if (e.key === "ArrowLeft") goPrev();
+    const num = Number(e.key);
+    if (num >= 1 && num <= state.choices.length) {
+      choose(state.choices[num - 1]);
+      return;
+    }
+    if (e.key === "ArrowLeft") goPrev();
     else if (e.key === "ArrowRight") goNext();
   });
 

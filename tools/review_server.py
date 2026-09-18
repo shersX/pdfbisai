@@ -1,9 +1,14 @@
 """本地审核服务：静态前端 + questions/decisions API。
 
 用法:
-    python tools/build_review_data.py   # 若 data.json 不存在
+    # 多数三选一（默认，沿用原判定文件）
+    python tools/build_review_data.py
     python tools/review_server.py
-    # 浏览器打开 http://127.0.0.1:8765
+
+    # 分歧四选一（独立数据与判定，不覆盖多数审批）
+    python tools/build_review_data.py --bucket split --out review/data_split.json
+    python tools/review_server.py --data review/data_split.json \\
+        --decisions outputs/review_decisions_split.json --port 8766
 """
 from __future__ import annotations
 
@@ -17,8 +22,11 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 REVIEW_DIR = ROOT / "review"
+
+# 运行时由 main() 注入
 DATA_PATH = REVIEW_DIR / "data.json"
 DECISIONS_PATH = ROOT / "outputs" / "review_decisions.json"
+ALLOWED_CHOICES = frozenset({"vl", "flash", "max", "retry"})
 
 
 def _read_json(path: Path, default):
@@ -54,7 +62,10 @@ class Handler(BaseHTTPRequestHandler):
         path = urlparse(self.path).path
         if path == "/api/questions":
             if not DATA_PATH.exists():
-                self._send_json(404, {"error": "review/data.json 不存在，请先运行 tools/build_review_data.py"})
+                self._send_json(
+                    404,
+                    {"error": f"{DATA_PATH.name} 不存在，请先运行 tools/build_review_data.py"},
+                )
                 return
             data = _read_json(DATA_PATH, {})
             self._send_json(200, data)
@@ -65,7 +76,6 @@ class Handler(BaseHTTPRequestHandler):
         if path in ("/", "/index.html"):
             self._serve_file(REVIEW_DIR / "index.html")
             return
-        # static under review/
         rel = path.lstrip("/")
         candidate = (REVIEW_DIR / rel).resolve()
         if not str(candidate).startswith(str(REVIEW_DIR.resolve())):
@@ -91,8 +101,8 @@ class Handler(BaseHTTPRequestHandler):
 
         qid = str(payload.get("id", "")).strip()
         choice = str(payload.get("choice", "")).strip()
-        if not qid or choice not in {"vl", "flash", "max"}:
-            self._send_json(400, {"error": "需要 id 与 choice in vl|flash|max"})
+        if not qid or choice not in ALLOWED_CHOICES:
+            self._send_json(400, {"error": "需要 id 与 choice in vl|flash|max|retry"})
             return
 
         data = _read_json(DATA_PATH, {"questions": []})
@@ -101,7 +111,12 @@ class Handler(BaseHTTPRequestHandler):
             self._send_json(404, {"error": f"题目不存在: {qid}"})
             return
 
-        ans = question.get("answers", {}).get(choice, {})
+        answers = question.get("answers", {})
+        if choice not in answers:
+            self._send_json(400, {"error": f"本题无选项 {choice}，可选: {list(answers)}"})
+            return
+
+        ans = answers.get(choice, {})
         decisions = _read_json(DECISIONS_PATH, {})
         decisions[qid] = {
             "choice": choice,
@@ -130,20 +145,39 @@ class Handler(BaseHTTPRequestHandler):
 
 
 def main() -> None:
+    global DATA_PATH, DECISIONS_PATH
+
     p = argparse.ArgumentParser()
     p.add_argument("--host", default="127.0.0.1")
     p.add_argument("--port", type=int, default=8765)
+    p.add_argument(
+        "--data",
+        default=str(REVIEW_DIR / "data.json"),
+        help="题目 JSON，分歧四选一用 review/data_split.json",
+    )
+    p.add_argument(
+        "--decisions",
+        default=str(ROOT / "outputs" / "review_decisions.json"),
+        help="判定落盘路径；分歧审批请用独立文件以免覆盖多数判定",
+    )
     args = p.parse_args()
 
+    DATA_PATH = Path(args.data)
+    if not DATA_PATH.is_absolute():
+        DATA_PATH = ROOT / DATA_PATH
+    DECISIONS_PATH = Path(args.decisions)
+    if not DECISIONS_PATH.is_absolute():
+        DECISIONS_PATH = ROOT / DECISIONS_PATH
+
     if not DATA_PATH.exists():
-        print("未找到 review/data.json，正在生成…")
+        print(f"未找到 {DATA_PATH}，正在按默认全量生成…")
         import sys
 
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from build_review_data import build_questions
 
         questions = build_questions(ROOT / "analysis_three_runs.xlsx")
-        REVIEW_DIR.mkdir(parents=True, exist_ok=True)
+        DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
         DATA_PATH.write_text(
             json.dumps(
                 {
@@ -163,9 +197,11 @@ def main() -> None:
     if not DECISIONS_PATH.exists():
         _write_json(DECISIONS_PATH, {})
 
+    meta = _read_json(DATA_PATH, {})
+    choices = meta.get("choices") or ["vl", "flash", "max"]
     server = ThreadingHTTPServer((args.host, args.port), Handler)
     print(f"审核前端: http://{args.host}:{args.port}")
-    print(f"题目数据: {DATA_PATH}")
+    print(f"题目数据: {DATA_PATH}（choices={choices}, count={meta.get('count')}）")
     print(f"判定落盘: {DECISIONS_PATH}")
     try:
         server.serve_forever()
