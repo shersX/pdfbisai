@@ -1,0 +1,544 @@
+submission=D:\desktop\multimodal_table_recognition\submissions\baseline_82.xlsx
+json_array_total=107
+kinds={'quoted_only': 22, 'unquoted_only': 40, 'no_number': 43, 'mixed_quoted': 2}
+sum_unquoted_number_tokens=131 sum_quoted_number_tokens=65
+questions_with_any_number=64
+
+=== quoted_only n=22 ===
+id=5 file=002.pdf type=extract u=0 q=2 elems=4
+  preview: STRNUM:188661393.95 | "" | "" | STRNUM:46023324.74
+  answer: ["188661393.95","","","46023324.74"]
+  question: 应收账款,应收票据,应收款项融资,其他应收款项 上期末各是多少？
+
+id=9 file=002.pdf type=thinking u=0 q=2 elems=2
+  preview: STRNUM:2794275324.10 | STRNUM:2918275906.82
+  answer: ["2794275324.10","2918275906.82"]
+  question: 本期和上期的资产合计分别是多少？
+
+id=17 file=003.pdf type=extract u=0 q=2 elems=2
+  preview: STRNUM:-5323072.70 | STRNUM:-9220946.25
+  answer: ["-5323072.70","-9220946.25"]
+  question: 本期和上期，信用减值损失分别是多少？
+
+id=26 file=006.pdf type=extract u=0 q=2 elems=2
+  preview: STRNUM:160112139.83 | STRNUM:180032578.58
+  answer: ["160112139.83","180032578.58"]
+  question: 应收账款表，1年以内账款，期末与期初余额是多少？
+
+id=27 file=006.pdf type=extract u=0 q=2 elems=2
+  preview: STRNUM:13470966.56 | STRNUM:17184279.22
+  answer: ["13470966.56","17184279.22"]
+  question: 应收账款表，5年以上账款，期末与期初余额是多少？
+
+id=36 file=006.pdf type=extract u=0 q=2 elems=2
+  preview: STRNUM:4881245.42 | STRNUM:100.00
+  answer: ["4881245.42","100.00"]
+  question: 坏账表中，期初余额中单项计提坏账准备的金额和计提比例是分别是多少？
+
+id=59 file=007.pdf type=extract u=0 q=1 elems=3
+  preview: "" | "" | STRNUM:1876349.13
+  answer: ["","","1876349.13"]
+  question: 固定资产情况表本期购置的房屋及建筑，官网设备，运输工具分别是多少？
+
+id=63 file=008.pdf type=thinking u=0 q=2 elems=2
+  preview: STRNUM:5130725.03 | STRNUM:6087088.05
+  answer: ["5130725.03","6087088.05"]
+  question: 关键管理人员薪酬本期发生额和上期发生额分别是多少？
+
+id=242 file=025.png type=extract u=0 q=5 elems=6
+  preview: STRNUM:9 | STR:7% | STRNUM:8 | STRNUM:14 | STRNUM:17 | STRNUM:16
+  answer: ["9","7%","8","14","17","16"]
+  question: 提取“Twice times a year”一行的全部数据，并按照“住宅 Inland、住宅 Mild、住宅 Total、商业 Inland、商业 Mild、商业 Total”的顺序返回。
+
+id=258 file=026.png type=thinking u=0 q=4 elems=4
+  preview: STRNUM:1 | STRNUM:51 | STRNUM:4 | STRNUM:14
+  answer: ["1","51","4","14"]
+  question: 请按表中顺序列出以下字段的答案：Total 4Q2017、Total YTD、Wrong Patient YTD、Procedure Not Followed YTD。
+
+id=328 file=033.jpg type=thinking u=0 q=2 elems=4
+  preview: STRNUM:46768.6 | STRNUM:116.03 | STR:2077年08月31日止 | STR:竖向
+  answer: ["46768.6","116.03","2077年08月31日止","竖向"]
+  question: 请按表中顺序列出以下字段的答案：共有宗地面积、房屋建筑面积、使用期限、表格方向。
+
+id=338 file=034.png type=thinking u=0 q=2 elems=4
+  preview: STRNUM:13902167523 | STR:wangsong@wuyuan.com | STR:重庆因瀚信息技术有限公司 | STRNUM:5
+  answer: ["13902167523","wangsong@wuyuan.com","重庆因瀚信息技术有限公司","5"]
+  question: 请按表中顺序列出以下字段的答案：手机、电子邮件、入职公司、职级。
+
+id=388 file=039.png type=thinking u=0 q=2 elems=2
+  preview: STRNUM:0.1028 | STRNUM:0.0877
+  answer: ["0.1028","0.0877"]
+  question: 请按表中顺序列出以下字段的答案：Multiple R-squared、Adjusted R-squared。
+
+id=438 file=045.jpg type=thinking u=0 q=3 elems=4
+  preview: STRNUM:96.31 | STRNUM:97.50 | STR:PTN | STRNUM:2
+  answer: ["96.31","97.50","PTN","2"]
+  question: 请按表中顺序列出以下字段的答案：PubTabNet VAST TEDS、PubTabNet TSRFormer S-TEDS、训练数据集类型之一、表中分组数量。
+
+id=468 file=048.jpg type=thinking u=0 q=4 elems=4
+  preview: STRNUM:7059703916.00 | STRNUM:4428852485.11 | STRNUM:11211345599.37 | STRNUM:344034065.45
+  answer: ["7059703916.00","4428852485.11","11211345599.37","344034065.45"]
+  question: 请按表中顺序列出以下字段的答案：流动资产合计期末余额、流动资产合计年初余额、固定资产期末余额、在建工程期末余额。
+
+id=478 file=049.jpg type=thinking u=0 q=2 elems=4
+  preview: STR:冷水机洗 | STRNUM:77 | STRNUM:95 | STR:175-185
+  answer: ["冷水机洗","77","95","175-185"]
+  question: 请按表中顺序列出以下字段的答案：洗涤建议、尺码 XL 衣长、尺码 M 胸围、XL 适合身高。
+
+id=552 file=058.pdf type=extract u=0 q=3 elems=3
+  preview: STRNUM:80.1 | STRNUM:82.6 | STRNUM:83.1
+  answer: ["80.1","82.6","83.1"]
+  question: 请从 58.pdf 的“Table 1 DeepSeek 基座模型对比”中提取：AGIEval (EM) 的三列分数。
+
+id=554 file=058.pdf type=extract u=0 q=3 elems=3
+  preview: STRNUM:62.8 | STRNUM:69.5 | STRNUM:76.8
+  answer: ["62.8","69.5","76.8"]
+  question: 请从 58.pdf 的“Table 1 DeepSeek 基座模型对比”中提取：HumanEval (Pass@1) 的三列分数。
+
+id=560 file=059.pdf type=extract u=0 q=6 elems=6
+  preview: STRNUM:46.2 | STRNUM:45.3 | STRNUM:75.6 | STRNUM:36.9 | STRNUM:38.1 | STRNUM:57.9
+  answer: ["46.2","45.3","75.6","36.9","38.1","57.9"]
+  question: 请从 59.pdf 的“Table 6 DeepSeek-V4-Pro-Max 与其他模型对比”中提取：SimpleQA-Verified (Pass@1) 六个模型分数。
+
+id=631 file=066.pdf type=extract u=0 q=3 elems=3
+  preview: STRNUM:220.2 | STRNUM:247.7 | STRNUM:275.3
+  answer: ["220.2","247.7","275.3"]
+  question: 请从 66.pdf 的“图7 盈利预测假设拆分表”中提取：收入前值 2024-2026 年。
+
+id=635 file=066.pdf type=extract u=0 q=3 elems=3
+  preview: STRNUM:28.5 | STRNUM:32.7 | STRNUM:36.2
+  answer: ["28.5","32.7","36.2"]
+  question: 请从 66.pdf 的“图7 盈利预测假设拆分表”中提取：归母净利润前值 2024-2026 年。
+
+id=681 file=071.pdf type=extract u=0 q=5 elems=5
+  preview: STRNUM:0.15 | STRNUM:0.10 | STRNUM:0.03 | STRNUM:0.015 | STRNUM:0.15
+  answer: ["0.15","0.10","0.03","0.015","0.15"]
+  question: 请从 71.pdf 的“表1 工业纯钛、α型和近α型钛合金牌号和化学成分”中提取：TA0 的杂质 Fe、C、N、H、O。
+
+=== unquoted_only n=40 ===
+id=7 file=002.pdf type=extract u=4 q=0 elems=11
+  preview: NUM:95250987.68 | "" | "" | "" | NUM:881323.23 | "" | "" | "" | NUM:15401527.35 | NUM:10540766.93 | ""
+  answer: [95250987.68,"","","",881323.23,"","","",15401527.35,10540766.93,""]
+  question: 列出所有非流动负债的本期金额
+
+id=8 file=002.pdf type=extract u=10 q=0 elems=18
+  preview: "" | "" | "" | NUM:17663778.06 | "" | "" | NUM:24132677.69 | NUM:908086512.3 | NUM:26653628.18 | "" | "" | NUM:3907669.91 | NUM:105814633.66 | "" | NUM:135604327.01 | NUM:3531360.81
+  answer: ["","","",17663778.06,"","",24132677.69,908086512.3,26653628.18,"","",3907669.91,105814633.66,"",135604327.01,3531360.81,25088416.69,161613200]
+  question: 列出所有非流动资产的上期末金额
+
+id=15 file=002.pdf type=thinking u=1 q=0 elems=1
+  preview: NUM:135088205.15
+  answer: [135088205.15]
+  question: 本期末去除归属母公司股东权益的股东权益有多少
+
+id=18 file=003.pdf type=extract u=2 q=0 elems=2
+  preview: NUM:40864602.2 | NUM:41567841.56
+  answer: [40864602.2,41567841.56]
+  question: 本期和上期，管理费用各是多少？
+
+id=21 file=005.pdf type=extract u=3 q=0 elems=3
+  preview: NUM:407166999.88 | NUM:407166999.88 | NUM:452817690.44
+  answer: [407166999.88,407166999.88,452817690.44]
+  question: 上年末，本年初和本年末，未分配利润各是多少？
+
+id=33 file=006.pdf type=extract u=2 q=0 elems=2
+  preview: NUM:7586126.44 | NUM:59.03
+  answer: [7586126.44,59.03]
+  question: 坏账表中，期末余额中单项计提坏账准备的金额和计提比例是分别是多少？
+
+id=35 file=006.pdf type=extract u=4 q=0 elems=4
+  preview: NUM:7586126.44 | NUM:24653375.86 | NUM:24653375.86 | NUM:32239502.3
+  answer: [7586126.44,24653375.86,24653375.86,32239502.3]
+  question: 坏账表中，期末余额中坏账准备中，各个分类的金额是多少
+
+id=38 file=006.pdf type=extract u=3 q=0 elems=3
+  preview: NUM:4881245.42 | NUM:25768946.28 | NUM:25768946.28
+  answer: [4881245.42,25768946.28,25768946.28]
+  question: 坏账表中，期初余额中坏账准备，各个分类的金额是多少
+
+id=57 file=007.pdf type=extract u=6 q=0 elems=6
+  preview: NUM:311640136.81 | NUM:1502429632.12 | NUM:802815549.18 | NUM:33551089.51 | NUM:24711347.91 | NUM:2675147755.53
+  answer: [311640136.81,1502429632.12,802815549.18,33551089.51,24711347.91,2675147755.53]
+  question: 固定资产情况表中账面原值期末余额按资产类别列出。
+
+id=58 file=007.pdf type=extract u=3 q=0 elems=5
+  preview: "" | "" | NUM:81371.67 | NUM:1876349.13 | NUM:1767848.19
+  answer: ["","",81371.67,1876349.13,1767848.19]
+  question: 固定资产情况表本期购置的各分类资产金额是多少？
+
+id=118 file=012.jpg type=thinking u=1 q=0 elems=4
+  preview: NUM:3 | STR:['Chemistry', 'Biology', 'Zoology'] | STR:['History', 'Geography'] | STR:是
+  answer: [3,"['Chemistry', 'Biology', 'Zoology']","['History', 'Geography']","是"]
+  question: 请按表中顺序列出以下字段的答案：数学表的阶段数、科学表包含科目、社会科学表包含科目、是否多级表头。
+
+id=148 file=015.jpg type=thinking u=1 q=0 elems=4
+  preview: "" | NUM:37 | STR:是 | STR:是
+  answer: ["",37,"是","是"]
+  question: 请按表中顺序列出以下字段的答案：电风扇颜色、表格所在页码、圆形线圈表包含规格区、电风扇表包含 Specifications 区。
+
+id=168 file=017.jpg type=thinking u=2 q=0 elems=4
+  preview: STR:Idaho State University | NUM:313 | NUM:250 | STR:Fall 2012 NDT Ranking Report Page 13
+  answer: ["Idaho State University",313,250,"Fall 2012 NDT Ranking Report Page 13"]
+  question: 请按表中顺序列出以下字段的答案：District 2 第二名学校、District 1 第一名分数、District 2 第一名分数、页脚。
+
+id=178 file=018.jpg type=thinking u=1 q=0 elems=4
+  preview: STR:Teatro Principal | STR:Servicios generales | NUM:5 | STR:PCT gasóleo C
+  answer: ["Teatro Principal","Servicios generales",5,"PCT gasóleo C"]
+  question: 请按表中顺序列出以下字段的答案：标黄服务、标蓝分组、表格页码、文件主题。
+
+id=188 file=019.jpg type=thinking u=2 q=0 elems=4
+  preview: STR:Virtuvės kriauklės čiaupai | NUM:6 | STR:l/min. | NUM:3
+  answer: ["Virtuvės kriauklės čiaupai",6,"l/min.",3]
+  question: 请按表中顺序列出以下字段的答案：1.3 表第一个 gaminių pogrupis、1.3 表第一个水流值、主要单位、表格数量。
+
+id=198 file=020.png type=thinking u=3 q=0 elems=4
+  preview: NUM:129 | NUM:129 | STR:$'000 | NUM:5
+  answer: [129,129,"$'000",5]
+  question: 请按表中顺序列出以下字段的答案：2011-12 Average staffing level、2012-13 Average staffing level、列单位、年度列数。
+
+id=208 file=021.jpg type=thinking u=4 q=0 elems=4
+  preview: NUM:0.22 | NUM:0.45 | NUM:8 | NUM:16
+  answer: [0.22,0.45,8,16]
+  question: 请按表中顺序列出以下字段的答案：BTM Si%、2HM C%、红色限制单元数量、绿色数值单元数量。
+
+id=218 file=022.png type=thinking u=4 q=0 elems=4
+  preview: NUM:2806 | NUM:6485 | NUM:5735 | NUM:5
+  answer: [2806,6485,5735,5]
+  question: 请按表中顺序列出以下字段的答案：2011-12 Cash and cash equivalents、2012-13 Receivables、2014-15 Employee provisions、估算年度列数。
+
+id=238 file=024.png type=thinking u=2 q=0 elems=4
+  preview: NUM:20 | "" | "" | NUM:2
+  answer: [20,"","",2]
+  question: 请按表中顺序列出以下字段的答案：Never serviced residential inland、Don’t know/refused residential total、Frequency once every two years residential inland、表格主分区数量。
+
+id=239 file=025.png type=extract u=2 q=0 elems=2
+  preview: NUM:297 | NUM:300
+  answer: [297,300]
+  question: 住宅客户与小型商业客户的总样本量分别是多少？
+
+id=249 file=026.png type=extract u=1 q=0 elems=4
+  preview: NUM:2 | "" | "" | ""
+  answer: [2,"","",""]
+  question: 2027年各季度，剂量错误的数量是多少？
+
+id=268 file=027.webp type=thinking u=3 q=0 elems=4
+  preview: NUM:86 | NUM:93.7 | NUM:86.1 | STR:GLM-OCR
+  answer: [86,93.7,86.1,"GLM-OCR"]
+  question: 请按表中顺序列出以下字段的答案：GLM-OCR TEDs_TEST、GLM-OCR Nanonts-KIE、GLM-OCR Handwritten-Forms、突出显示模型。
+
+id=278 file=028.jpg type=thinking u=1 q=0 elems=4
+  preview: STR:大学生心理健康教育（1-4周） | STR:网络设备及应用（1-16周） | "" | NUM:5
+  answer: ["大学生心理健康教育（1-4周）","网络设备及应用（1-16周）","",5]
+  question: 请按表中顺序列出以下字段的答案：星期三第一二节、星期五第九十节、午休行文本、每周列数。
+
+id=288 file=029.png type=thinking u=3 q=0 elems=4
+  preview: NUM:0 | NUM:11 | NUM:21 | STR:Sosiologi og sosialentr.
+  answer: [0,11,21,"Sosiologi og sosialentr."]
+  question: 请按表中顺序列出以下字段的答案：Fransk nivå 3 endelig valg、Spansk 1+2 endelig valg、Tysk 1+2* endelig valg、最高 endelig valg 科目。
+
+id=308 file=031.png type=thinking u=4 q=0 elems=4
+  preview: NUM:10 | NUM:3 | NUM:10 | NUM:9.3
+  answer: [10,3,10,9.3]
+  question: 请按表中顺序列出以下字段的答案：Borboleta Transgênero nota、满分队伍数量、最高分、最低分。
+
+id=318 file=032.jpg type=thinking u=3 q=0 elems=4
+  preview: NUM:70 | STR:黄小云 | NUM:82 | NUM:11
+  answer: [70,"黄小云",82,11]
+  question: 请按表中顺序列出以下字段的答案：最低分、最低分姓名、计应10班分数、记录人数。
+
+id=368 file=037.jpg type=thinking u=2 q=0 elems=4
+  preview: STR:数学 | STR:音乐 | NUM:5 | NUM:2
+  answer: ["数学","音乐",5,2]
+  question: 请按表中顺序列出以下字段的答案：周三第三节、周四第六节、上午节数、下午节数。
+
+id=398 file=040.png type=thinking u=4 q=0 elems=4
+  preview: NUM:14.1 | NUM:18 | NUM:54.3 | NUM:55.1
+  answer: [14.1,18,54.3,55.1]
+  question: 请按表中顺序列出以下字段的答案：Current smoker control percent、Current smoker case percent、Age mean control、Age mean case。
+
+id=408 file=041.png type=thinking u=3 q=0 elems=4
+  preview: STR:207.564±45.410 | NUM:2 | NUM:3 | NUM:4
+  answer: ["207.564±45.410",2,3,4]
+  question: 请按表中顺序列出以下字段的答案：Elderly total peak pressure C、分组数量、面罩类别数量、指标区块数量。
+
+id=528 file=055.jpg type=thinking u=3 q=0 elems=4
+  preview: NUM:399 | NUM:79999 | STR:是 | NUM:3
+  answer: [399,79999,"是",3]
+  question: 请按表中顺序列出以下字段的答案：最低活动价、最高活动价、备注中是否含退换规则、表格下方说明条数。
+
+id=548 file=057.jpg type=thinking u=4 q=0 elems=4
+  preview: NUM:3.6 | NUM:47.7 | NUM:39.3 | NUM:5
+  answer: [3.6,47.7,39.3,5]
+  question: 请按表中顺序列出以下字段的答案：台积电人均奖金2025、SK海力士人均奖金2026E、三星电子人均奖金2026E、公司数量。
+
+id=570 file=060.pdf type=extract u=4 q=0 elems=4
+  preview: NUM:869 | NUM:536 | NUM:159 | NUM:174
+  answer: [869,536,159,174]
+  question: 请从 60.pdf 的“Table 9-11 Search Q&A 评估”中提取：Table 9 Total 行的 #、Agent Win、RAG Win、Tie。
+
+id=580 file=061.pdf type=extract u=7 q=0 elems=8
+  preview: STR:Subtotal (小计) | NUM:1349 | NUM:879 | NUM:436 | NUM:34 | NUM:65.16 | NUM:32.32 | NUM:2.52
+  answer: ["Subtotal (小计)",1349,879,436,34,65.16,32.32,2.52]
+  question: 请从 61.pdf 的“Table 12 中文功能写作评估”中提取：Business Writing 的 Subtotal 行。
+
+id=592 file=062.pdf type=extract u=3 q=0 elems=3
+  preview: NUM:24 | NUM:24 | NUM:0
+  answer: [24,24,0]
+  question: 请从 62.pdf 的“Table 13 中文创意写作评估”中提取：Classical Poetry (古诗文) 的指令遵循 DS/Gem/Tie。
+
+id=595 file=062.pdf type=extract u=3 q=0 elems=3
+  preview: NUM:4 | NUM:2 | NUM:0
+  answer: [4,2,0]
+  question: 请从 62.pdf 的“Table 13 中文创意写作评估”中提取：Creative Writing (创意写作) 的写作质量 DS/Gem/Tie。
+
+id=615 file=064.pdf type=extract u=2 q=0 elems=2
+  preview: NUM:32 | NUM:35
+  answer: [32,35]
+  question: 请从 64.pdf 的“Table 5”中提取：Average reduction 行的 Estimated total/low flow reduction。
+
+id=630 file=066.pdf type=extract u=3 q=0 elems=3
+  preview: NUM:21021 | NUM:22776 | NUM:24601
+  answer: [21021,22776,24601]
+  question: 请从 66.pdf 的“图7 盈利预测假设拆分表”中提取：调整后 2024-2026 年收入。
+
+id=714 file=074.jpg type=extract u=3 q=0 elems=3
+  preview: NUM:1000 | NUM:0.01 | NUM:10.0
+  answer: [1000,0.01,10.00]
+  question: 请从 74.jpg 的“A complex table invoice”中提取：Paperclips 的 Qty、单价、Cost。
+
+id=862 file=089.png type=extract u=1 q=0 elems=1
+  preview: NUM:10
+  answer: [10]
+  question: 请从 89.png 的“colored merged-cell layout”中提取：紫色大块内黄色小块编号。
+
+id=868 file=089.png type=thinking u=10 q=0 elems=10
+  preview: NUM:1 | NUM:4 | NUM:5 | NUM:6 | NUM:7 | NUM:11 | NUM:12 | NUM:13 | NUM:17 | NUM:18
+  answer: [1,4,5,6,7,11,12,13,17,18]
+  question: 请按从上到下列出最左列可见编号。
+
+=== mixed_quoted n=2 ===
+id=228 file=023.png type=thinking u=3 q=1 elems=4
+  preview: NUM:2175 | NUM:3418 | STRNUM:34.7 | NUM:21
+  answer: [2175,3418,"34.7",21]
+  question: 请按表中顺序列出以下字段的答案：Total Malaria visit non-user、Total Non-malaria visit non-user、Total Malaria prevalence、Area 数量。
+
+id=378 file=038.png type=thinking u=1 q=2 elems=4
+  preview: STRNUM:8.635 | STRNUM:84.172 | STR:Coded name | NUM:4
+  answer: ["8.635","84.172","Coded name",4]
+  question: 请按表中顺序列出以下字段的答案：HCMRM total pore volume、HCMRM average particle size、编码列名、设计因素数量。
+
+=== no_number n=43 ===
+id=14 file=002.pdf type=thinking u=0 q=0 elems=2
+  preview: STR:优先股 | STR:永续债
+  answer: ["优先股","永续债"]
+  question: 负债中的应付债券包括那几部分？
+
+id=19 file=003.pdf type=thinking u=0 q=0 elems=1
+  preview: ""
+  answer: [""]
+  question: 营业总收入由那些项组成？
+
+id=22 file=005.pdf type=thinking u=0 q=0 elems=4
+  preview: STR:专项储备 | STR:未分配利润 | STR:少数股东权益 | STR:股东权益合计
+  answer: ["专项储备","未分配利润","少数股东权益","股东权益合计"]
+  question: 那些项，今年有增减变动？
+
+id=23 file=005.pdf type=thinking u=0 q=0 elems=2
+  preview: STR:本期提取 | STR:本期使用
+  answer: ["本期提取","本期使用"]
+  question: 专项储备，本年度增减是由那些变动引起的？
+
+id=24 file=005.pdf type=thinking u=0 q=0 elems=8
+  preview: STR:股本 | STR:其他权益工具 | STR:资本公积 | STR:减：库存股 | STR:其他综合收益 | STR:专项储备 | STR:盈余公积 | STR:未分配利润
+  answer: ["股本","其他权益工具","资本公积","减：库存股","其他综合收益","专项储备","盈余公积","未分配利润"]
+  question: 归属母公司股东权益的包含那些部分？
+
+id=42 file=006.pdf type=thinking u=0 q=0 elems=2
+  preview: STR:单项计提坏账准备的应收账款 | STR:按组合计提坏账准备的应收账款
+  answer: ["单项计提坏账准备的应收账款","按组合计提坏账准备的应收账款"]
+  question: 坏账表中，坏账的分类有哪些？
+
+id=44 file=006.pdf type=extract u=0 q=0 elems=4
+  preview: STR:新疆蓝海新能源有限公司 | STR:新疆海联三邦投资有限公司 | STR:昌吉市御足堂康体有限公司 | STR:昌吉市金海快捷宾馆
+  answer: ["新疆蓝海新能源有限公司","新疆海联三邦投资有限公司","昌吉市御足堂康体有限公司","昌吉市金海快捷宾馆"]
+  question: 单项计提坏账准备表，所有应收账款的公司有哪些？
+
+id=50 file=006.pdf type=thinking u=0 q=0 elems=3
+  preview: STR:新疆海联三邦投资有限公司 | STR:昌吉市御足堂康体有限公司 | STR:昌吉市金海快捷宾馆
+  answer: ["新疆海联三邦投资有限公司","昌吉市御足堂康体有限公司","昌吉市金海快捷宾馆"]
+  question: 单项计提坏账准备表，预计无法回收的公司包括？
+
+id=60 file=008.pdf type=extract u=0 q=0 elems=3
+  preview: STR:新疆东方环宇投资（集团）有限公司 | STR:昌吉环宅世纪城房地产开发有限公司 | STR:昌吉市德声房地产经纪有限公司
+  answer: ["新疆东方环宇投资（集团）有限公司","昌吉环宅世纪城房地产开发有限公司","昌吉市德声房地产经纪有限公司"]
+  question: 关联租赁情况表中出租方有哪些？
+
+id=61 file=008.pdf type=extract u=0 q=0 elems=1
+  preview: STR:房屋
+  answer: ["房屋"]
+  question: 关联租赁情况表中租赁资产种类是什么？
+
+id=75 file=010.png type=extract u=0 q=0 elems=2
+  preview: STR:发布成果与成长 | STR:家长结营交接
+  answer: ["发布成果与成长","家长结营交接"]
+  question: Day 6 下午 14:00-17:30 包含哪些事项？
+
+id=82 file=010.png type=thinking u=0 q=0 elems=3
+  preview: STR:Day 2 | STR:Day 4 | STR:Day 5
+  answer: ["Day 2","Day 4","Day 5"]
+  question: 哪些天包含“评审记录”？
+
+id=83 file=010.png type=thinking u=0 q=0 elems=5
+  preview: STR:Day 1 | STR:Day 3 | STR:Day 4 | STR:Day 5 | STR:Day 6
+  answer: ["Day 1","Day 3","Day 4","Day 5","Day 6"]
+  question: 哪些天包含绿色“成果”标签？
+
+id=89 file=010.png type=extract u=0 q=0 elems=2
+  preview: STR:用户验证实验 | STR:基于数据分析
+  answer: ["用户验证实验","基于数据分析"]
+  question: Day 4 下午 14:00-17:30 包含哪两个任务？
+
+id=90 file=010.png type=extract u=0 q=0 elems=2
+  preview: STR:发布成果与成长 | STR:家长结营交接
+  answer: ["发布成果与成长","家长结营交接"]
+  question: Day 6 下午 14:00-17:30 包含哪两个事项？
+
+id=93 file=010.png type=thinking u=0 q=0 elems=3
+  preview: STR:Day 2 | STR:Day 4 | STR:Day 5
+  answer: ["Day 2","Day 4","Day 5"]
+  question: 19:00-21:00 时段中，哪些天有“评审记录”产出？
+
+id=94 file=010.png type=thinking u=0 q=0 elems=5
+  preview: STR:Day 1 | STR:Day 3 | STR:Day 4 | STR:Day 5 | STR:Day 6
+  answer: ["Day 1","Day 3","Day 4","Day 5","Day 6"]
+  question: 14:00-17:30 时段中，哪些天的卡片带有绿色“成果”标签？
+
+id=98 file=010.png type=thinking u=0 q=0 elems=3
+  preview: STR:Day 2 | STR:Day 3 | STR:Day 5
+  answer: ["Day 2","Day 3","Day 5"]
+  question: 哪些 Day 的上午 9:30-12:00 时段卡片带有 BP 模块标签？
+
+id=108 file=011.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:双语/全英文(Chinese or English) | STR:生命科学学院School of Life Sciences and Biotec | STR:概率统计Probability and Statistics | STR:韦朝春
+  answer: ["双语/全英文(Chinese or English)","生命科学学院School of Life Sciences and Biotechnology","概率统计Probability and Statistics","韦朝春"]
+  question: 请按表中顺序列出以下字段的答案：授课语言/Language of Instruction、开课院系/School、先修课程/Prerequisite、授课教师/Teacher。
+
+id=128 file=013.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:AC≥ (220)V/(50)Hz | STR:Available | "" | STR:Compressor (5) Year. Other parts: ≥ (2) 
+  answer: ["AC≥ (220)V/(50)Hz","Available","","Compressor (5) Year. Other parts: ≥ (2) Year"]
+  question: 请按表中顺序列出以下字段的答案：电源、过滤网、室内机颜色、保修。
+
+id=138 file=014.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:Drop feed | STR:≥ 5 mm | STR:2 year | STR:≥ 1800 spm
+  answer: ["Drop feed","≥ 5 mm","2 year","≥ 1800 spm"]
+  question: 请按表中顺序列出以下字段的答案：直缝纫机送料机构、直缝纫机针距、直缝纫机保修、之字形缝纫机最大速度。
+
+id=158 file=016.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:pieces | STR:11EU/2016 R1 Page 45 of 81 | STR:是 | STR:否
+  answer: ["pieces","11EU/2016 R1 Page 45 of 81","是","否"]
+  question: 请按表中顺序列出以下字段的答案：Leads Set 数量单位、第一页脚注格式、Photoelectric 是否带红字标题、Leads Set 是否含图片/示意表。
+
+id=243 file=025.png type=extract u=0 q=0 elems=2
+  preview: STR:Once a year or annually | STR:Never
+  answer: ["Once a year or annually","Never"]
+  question: 在住宅客户的 Total 列中，哪些频率对应的比例不低于 15%？
+
+id=244 file=025.png type=extract u=0 q=0 elems=2
+  preview: STR:Never | STR:33%
+  answer: ["Never","33%"]
+  question: 不考虑 Sample Size，住宅客户 Total 列中比例最高的选项是什么？比例是多少？
+
+id=245 file=025.png type=extract u=0 q=0 elems=2
+  preview: STR:Once every two years | STR:Once every three years
+  answer: ["Once every two years","Once every three years"]
+  question: 在住宅客户 Total 列中，哪些频率选项的比例相同且均为10%？
+
+id=248 file=025.png type=thinking u=0 q=0 elems=4
+  preview: STR:Once every two years | STR:Once every three years | STR:Once every four years or less frequently | STR:Don't know/Refused
+  answer: ["Once every two years","Once every three years","Once every four years or less frequently","Don't know/Refused"]
+  question: 在小型商业客户 Total 列中，找出比例低于10%的所有频率选项。
+
+id=298 file=030.png type=thinking u=0 q=0 elems=4
+  preview: STR:15. apríla | STR:15. augustu | STR:31.12. | STR:Prislúchajúci právny predpis
+  answer: ["15. apríla","15. augustu","31.12.","Prislúchajúci právny predpis"]
+  question: 请按表中顺序列出以下字段的答案：第五条日期、第六条日期、第八条日期、法律依据列名。
+
+id=348 file=035.png type=thinking u=0 q=0 elems=4
+  preview: STR:Third-party | STR:HTML, PDF, TXT | STR:HTML, PDF, ePub | STR:HTML
+  answer: ["Third-party","HTML, PDF, TXT","HTML, PDF, ePub","HTML"]
+  question: 请按表中顺序列出以下字段的答案：MDX Book/article export、Quarkdown Targets、AsciiDoc Targets、MDX Targets。
+
+id=358 file=036.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:是 | STR:是 | STR:否 | STR:是
+  answer: ["是","是","否","是"]
+  question: 请按表中顺序列出以下字段的答案：是否横向拍摄、是否含金额列、是否含订单号字段、是否含明细行。
+
+id=409 file=043.jpg type=extract u=0 q=0 elems=2
+  preview: STR:应用广度 | STR:应用深度
+  answer: ["应用广度","应用深度"]
+  question: 应用能力包括哪几种？
+
+id=418 file=043.jpg type=thinking u=0 q=0 elems=3
+  preview: STR:功能丰富度 | STR:对用户数据隐私保护、数据安全措施 | STR:已覆盖的行业数
+  answer: ["功能丰富度","对用户数据隐私保护、数据安全措施","已覆盖的行业数"]
+  question: 请按表中顺序列出以下字段的答案：工具平台能力二级之一、开发性二级说明之二、应用广度二级说明。
+
+id=428 file=044.jpg type=thinking u=0 q=0 elems=6
+  preview: STR:10.41% | STR:合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定 | STR:王永平 | STR:梁卫凤 | STR:胡浙明 | STR:2023年4月12日
+  answer: ["10.41%","合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定","王永平","梁卫凤","胡浙明","2023年4月12日"]
+  question: 请按表中顺序列出以下字段的答案：中标价、工期、项目经理、合同签订时间。
+
+id=448 file=046.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:021-88888888 | STR:公务出行 | STR:沪M888888 | STR:合小安
+  answer: ["021-88888888","公务出行","沪M888888","合小安"]
+  question: 请按表中顺序列出以下字段的答案：Driver contact number、Car reason、License plate number、Driver name。
+
+id=458 file=047.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:专科 | STR:三峡大学 | STR:1534914xxxx | STR:园林设计师
+  answer: ["专科","三峡大学","1534914xxxx","园林设计师"]
+  question: 请按表中顺序列出以下字段的答案：学历、毕业院校、联系电话、求职意向。
+
+id=488 file=051.jpg type=thinking u=0 q=0 elems=3
+  preview: STR:否 | STR:是 | STR:是
+  answer: ["否","是","是"]
+  question: 请按表中顺序列出以下字段的答案：是否含税率列、是否含日期字段、是否含签章栏。
+
+id=489 file=052.jpg type=extract u=0 q=0 elems=2
+  preview: STR:注塑机MA3200ⅡS/1700 | STR:注塑机MA860/260G
+  answer: ["注塑机MA3200ⅡS/1700","注塑机MA860/260G"]
+  question: 两种机器的名称及型号是什么？
+
+id=498 file=052.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:是 | STR:是 | STR:是 | STR:是
+  answer: ["是","是","是","是"]
+  question: 请按表中顺序列出以下字段的答案：是否含单价列、是否含金额列、是否含多行明细、是否横向拍摄。
+
+id=508 file=053.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:0mg | STR:6g | STR:4g | STR:0g
+  answer: ["0mg","6g","4g","0g"]
+  question: 请按表中顺序列出以下字段的答案：Sodium、Total Carbohydrate、Sugars、Protein。
+
+id=518 file=054.jpg type=thinking u=0 q=0 elems=4
+  preview: STR:4,4 g | STR:12 g | STR:14 g | STR:0,11 g
+  answer: ["4,4 g","12 g","14 g","0,11 g"]
+  question: 请按表中顺序列出以下字段的答案：Carbohydrates 125g、Proteins 100g、Proteins 125g、Salt 100g。
+
+id=538 file=056.png type=thinking u=0 q=0 elems=4
+  preview: STR:是 | STR:是 | STR:是 | STR:22:00
+  answer: ["是","是","是","22:00"]
+  question: 请按表中顺序列出以下字段的答案：是否包含自由调整、是否包含评审记录、是否包含复盘、最后时间段。
+
+id=550 file=058.pdf type=extract u=0 q=0 elems=3
+  preview: STR:MoE | STR:MoE | STR:MoE
+  answer: ["MoE","MoE","MoE"]
+  question: 请从 58.pdf 的“Table 1 DeepSeek 基座模型对比”中提取：Architecture 行三个模型的值。
+
+id=632 file=066.pdf type=extract u=0 q=0 elems=3
+  preview: STR:44.4% | STR:44.6% | STR:44.6%
+  answer: ["44.4%","44.6%","44.6%"]
+  question: 请从 66.pdf 的“图7 盈利预测假设拆分表”中提取：调整后毛利率 2024-2026 年。
+
+id=905 file=093.jpg type=extract u=0 q=0 elems=2
+  preview: STR:basic structure | STR:local structure perturbations
+  answer: ["basic structure","local structure perturbations"]
+  question: 请从 93.jpg 的“ASCII Summary records table”中提取：中间列的两个 Description。

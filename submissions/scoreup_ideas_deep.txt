@@ -1,0 +1,142 @@
+=== european-style decimal candidates ===
+id=7 fmt=json_array ans='[95250987.68,"","","",881323.23,"","","",15401527.35,10540766.93,""]' q=列出所有非流动负债的本期金额
+id=8 fmt=json_array ans='["","","",17663778.06,"","",24132677.69,908086512.3,26653628.18,"","",3907669.91,105814633.66,"",135604327.01,3531360.81,25088416.69,161613200]' q=列出所有非流动资产的上期末金额
+id=18 fmt=json_array ans='[40864602.2,41567841.56]' q=本期和上期，管理费用各是多少？
+id=21 fmt=json_array ans='[407166999.88,407166999.88,452817690.44]' q=上年末，本年初和本年末，未分配利润各是多少？
+id=33 fmt=json_array ans='[7586126.44,59.03]' q=坏账表中，期末余额中单项计提坏账准备的金额和计提比例是分别是多少？
+id=35 fmt=json_array ans='[7586126.44,24653375.86,24653375.86,32239502.3]' q=坏账表中，期末余额中坏账准备中，各个分类的金额是多少
+id=38 fmt=json_array ans='[4881245.42,25768946.28,25768946.28]' q=坏账表中，期初余额中坏账准备，各个分类的金额是多少
+id=57 fmt=json_array ans='[311640136.81,1502429632.12,802815549.18,33551089.51,24711347.91,2675147755.53]' q=固定资产情况表中账面原值期末余额按资产类别列出。
+id=58 fmt=json_array ans='["","",81371.67,1876349.13,1767848.19]' q=固定资产情况表本期购置的各分类资产金额是多少？
+id=168 fmt=json_array ans='["Idaho State University",313,250,"Fall 2012 NDT Ranking Report Page 13"]' q=请按表中顺序列出以下字段的答案：District 2 第二名学校、District 1 第一名分数、District 2 第一名分数、页脚。
+id=198 fmt=json_array ans='[129,129,"$\'000",5]' q=请按表中顺序列出以下字段的答案：2011-12 Average staffing level、2012-13 Average staffin
+id=208 fmt=json_array ans='[0.22,0.45,8,16]' q=请按表中顺序列出以下字段的答案：BTM Si%、2HM C%、红色限制单元数量、绿色数值单元数量。
+id=218 fmt=json_array ans='[2806,6485,5735,5]' q=请按表中顺序列出以下字段的答案：2011-12 Cash and cash equivalents、2012-13 Receivables、
+id=228 fmt=json_array ans='[2175,3418,"34.7",21]' q=请按表中顺序列出以下字段的答案：Total Malaria visit non-user、Total Non-malaria visit n
+id=239 fmt=json_array ans='[297,300]' q=住宅客户与小型商业客户的总样本量分别是多少？
+id=268 fmt=json_array ans='[86,93.7,86.1,"GLM-OCR"]' q=请按表中顺序列出以下字段的答案：GLM-OCR TEDs_TEST、GLM-OCR Nanonts-KIE、GLM-OCR Handwrit
+id=288 fmt=json_array ans='[0,11,21,"Sosiologi og sosialentr."]' q=请按表中顺序列出以下字段的答案：Fransk nivå 3 endelig valg、Spansk 1+2 endelig valg、Tys
+id=304 fmt=number ans='9,3' q=请提取“Império da Formiga nota”对应的值。
+id=308 fmt=json_array ans='[10,3,10,9.3]' q=请按表中顺序列出以下字段的答案：Borboleta Transgênero nota、满分队伍数量、最高分、最低分。
+id=318 fmt=json_array ans='[70,"黄小云",82,11]' q=请按表中顺序列出以下字段的答案：最低分、最低分姓名、计应10班分数、记录人数。
+id=368 fmt=json_array ans='["数学","音乐",5,2]' q=请按表中顺序列出以下字段的答案：周三第三节、周四第六节、上午节数、下午节数。
+id=374 fmt=string ans='["25–35",25,30,35]' q=请提取“Temperature levels”对应的值。
+id=376 fmt=string ans='["4–8",4,6,8]' q=请提取“Initial dye concentration levels”对应的值。
+id=377 fmt=string ans='["50–150",50,100,150]' q=请提取“Mesh size levels”对应的值。
+id=398 fmt=json_array ans='[14.1,18,54.3,55.1]' q=请按表中顺序列出以下字段的答案：Current smoker control percent、Current smoker case per
+id=408 fmt=json_array ans='["207.564±45.410",2,3,4]' q=请按表中顺序列出以下字段的答案：Elderly total peak pressure C、分组数量、面罩类别数量、指标区块数量。
+id=517 fmt=string ans='3,5 g' q=请提取“Carbohydrates 100g”对应的值。
+id=528 fmt=json_array ans='[399,79999,"是",3]' q=请按表中顺序列出以下字段的答案：最低活动价、最高活动价、备注中是否含退换规则、表格下方说明条数。
+id=548 fmt=json_array ans='[3.6,47.7,39.3,5]' q=请按表中顺序列出以下字段的答案：台积电人均奖金2025、SK海力士人均奖金2026E、三星电子人均奖金2026E、公司数量。
+id=570 fmt=json_array ans='[869,536,159,174]' q=请从 60.pdf 的“Table 9-11 Search Q&A 评估”中提取：Table 9 Total 行的 #、Agent Win、
+id=580 fmt=json_array ans='["Subtotal (小计)",1349,879,436,34,65.16,32.32,2.52]' q=请从 61.pdf 的“Table 12 中文功能写作评估”中提取：Business Writing 的 Subtotal 行。
+id=592 fmt=json_array ans='[24,24,0]' q=请从 62.pdf 的“Table 13 中文创意写作评估”中提取：Classical Poetry (古诗文) 的指令遵循 DS/Gem/
+id=595 fmt=json_array ans='[4,2,0]' q=请从 62.pdf 的“Table 13 中文创意写作评估”中提取：Creative Writing (创意写作) 的写作质量 DS/Gem
+id=615 fmt=json_array ans='[32,35]' q=请从 64.pdf 的“Table 5”中提取：Average reduction 行的 Estimated total/low flow 
+id=630 fmt=json_array ans='[21021,22776,24601]' q=请从 66.pdf 的“图7 盈利预测假设拆分表”中提取：调整后 2024-2026 年收入。
+id=714 fmt=json_array ans='[1000,0.01,10.00]' q=请从 74.jpg 的“A complex table invoice”中提取：Paperclips 的 Qty、单价、Cost。
+id=722 fmt=string ans='$250,000' q=请从 75.jpg 的“Pro Forma Capitalization Table”中提取：Round 1 Raise。
+id=723 fmt=string ans='$3,000,000' q=请从 75.jpg 的“Pro Forma Capitalization Table”中提取：Round 2 Premoney value。
+id=868 fmt=json_array ans='[1,4,5,6,7,11,12,13,17,18]' q=请按从上到下列出最左列可见编号。
+
+=== answers containing % ===
+n=31
+Counter({'string': 15, 'json': 12, 'json_array': 4})
+id=43 fmt=json ans={"row_count":7,"col_count":5,"cells":[{"text":"单位名称","row":0,"col":0,"rowspan":2,"colspan":1},{"text
+id=203 fmt=string ans=Si%
+id=223 fmt=string ans=aOR (95% CI)‡
+id=236 fmt=string ans=51%
+id=240 fmt=string ans=36%
+id=242 fmt=json_array ans=["9","7%","8","14","17","16"]
+id=244 fmt=json_array ans=["Never","33%"]
+id=428 fmt=json_array ans=["10.41%","合同签订之日起至2024年12月31日，具体项目及工期按每个项目施工合同中确定","王永平","梁卫凤","胡浙明","2023年4月12日"]
+id=503 fmt=string ans=% Daily Value
+id=513 fmt=string ans=% RI* % AR*
+id=569 fmt=json ans={"row_count":6,"col_count":9,"cells":[{"text":"Difficulty","row":0,"col":0,"rowspan":1,"colspan":1},
+id=579 fmt=json ans={"row_count":45,"col_count":9,"cells":[{"text":"Category","row":0,"col":0,"rowspan":2,"colspan":1},{
+id=589 fmt=json ans={"row_count":21,"col_count":14,"cells":[{"text":"Subcategory (文体)","row":0,"col":0,"rowspan":2,"cols
+id=599 fmt=json ans={"row_count":11,"col_count":10,"cells":[{"text":"Area (ha)","row":0,"col":0,"rowspan":1,"colspan":1}
+id=609 fmt=json ans={"row_count":10,"col_count":7,"cells":[{"text":"Catchment","row":0,"col":0,"rowspan":2,"colspan":1},
+id=623 fmt=string ans=15.5%
+id=632 fmt=json_array ans=["44.4%","44.6%","44.6%"]
+id=633 fmt=string ans=22.6%
+id=634 fmt=string ans=12.1%
+id=662 fmt=string ans=15.1%
+id=665 fmt=string ans=0.1%
+id=679 fmt=json ans={"row_count":39,"col_count":25,"cells":[{"text":"合金牌号","row":0,"col":0,"rowspan":4,"colspan":1},{"te
+id=689 fmt=json ans={"row_count":21,"col_count":20,"cells":[{"text":"合金牌号","row":0,"col":0,"rowspan":4,"colspan":1},{"te
+id=699 fmt=json ans={"row_count":18,"col_count":20,"cells":[{"text":"合金牌号","row":0,"col":0,"rowspan":4,"colspan":1},{"te
+id=719 fmt=json ans={"row_count":20,"col_count":13,"cells":[{"text":"Common","row":0,"col":0,"rowspan":3,"colspan":1},{"
+
+=== placeholder-like answers ===
+id=241 fmt=number ans='--' q=“Three or more times a year”这一行中，住宅客户 Mild 列的值是什么？
+
+=== boolean token variants in answers ===
+token='NO' n=1 ids=['889']
+token='No' n=6 ids=['123', '129', '142', '303', '853', '902']
+
+=== structure cell density ===
+id=1 cells=34 area=44 local_hint=True rc=11 cc=4 q=恢复一下 第一行 和 前3列的表格结构
+id=25 cells=12 area=30 local_hint=True rc=10 cc=3 q=应收账款表，恢复一下 第一行 和 前1列的表格结构
+id=32 cells=9 area=42 local_hint=True rc=7 cc=6 q=坏账表中，恢复前2行和第一列的表格结构
+id=43 cells=11 area=35 local_hint=True rc=7 cc=5 q=单项计提坏账准备表，恢复前两行和第一列
+id=51 cells=35 area=203 local_hint=True rc=29 cc=7 q=恢复固定资产情况表的第一行，第一列表结构。
+id=549 cells=6 area=168 local_hint=False rc=28 cc=6 q=请恢复 58.pdf 中“Table 1 DeepSeek 基座模型对比”的表头行结构。
+id=559 cells=7 area=184 local_hint=False rc=23 cc=8 q=请恢复 59.pdf 中“Table 6 DeepSeek-V4-Pro-Max 与其他模型对比”的
+id=569 cells=9 area=54 local_hint=False rc=6 cc=9 q=请恢复 60.pdf 中“Table 9”的表头行结构。
+id=579 cells=10 area=405 local_hint=False rc=45 cc=9 q=请恢复 61.pdf 中“Table 12 中文功能写作评估”的表头行结构。
+id=589 cells=16 area=294 local_hint=False rc=21 cc=14 q=请恢复 62.pdf 中“Table 13 中文创意写作评估”的表头行结构。
+id=599 cells=10 area=110 local_hint=False rc=11 cc=10 q=请恢复 63.pdf 中“Table 1 catchment site characteristic
+id=609 cells=8 area=70 local_hint=False rc=10 cc=7 q=请恢复 64.pdf 中“Table 5”的表头行结构。
+id=619 cells=6 area=72 local_hint=False rc=12 cc=6 q=请恢复 65.pdf 中“盈利预测和财务指标”的表头行结构。
+id=629 cells=10 area=310 local_hint=False rc=31 cc=10 q=请恢复 66.pdf 中“图7 盈利预测假设拆分表”的表头行结构。
+id=639 cells=6 area=96 local_hint=False rc=16 cc=6 q=请恢复 67.pdf 中“关键财务与估值指标”的表头行结构。
+id=649 cells=12 area=120 local_hint=False rc=12 cc=10 q=请恢复 68.pdf 中“第一张表”的表头行结构。
+id=659 cells=8 area=84 local_hint=False rc=14 cc=6 q=请恢复 69.pdf 中“Table 1 SQA perturbation results”的表头行
+id=669 cells=5 area=45 local_hint=False rc=9 cc=5 q=请恢复 70.pdf 中“Table II real-time stereo matching me
+id=679 cells=29 area=975 local_hint=False rc=39 cc=25 q=请恢复 71.pdf 中“表1 工业纯钛、α型和近α型钛合金牌号和化学成分”的表头行结构。
+id=689 cells=24 area=420 local_hint=False rc=21 cc=20 q=请恢复 72.pdf 中“表1（续）和表2 β型和近β型钛合金牌号及化学成分”的表头行结构。
+id=699 cells=24 area=360 local_hint=False rc=18 cc=20 q=请恢复 73.pdf 中“表2（续）”的表头行结构。
+id=709 cells=4 area=32 local_hint=False rc=8 cc=4 q=请恢复 74.jpg 中“A complex table invoice”的表头行结构。
+id=719 cells=20 area=260 local_hint=False rc=20 cc=13 q=请恢复 75.jpg 中“Pro Forma Capitalization Table”的表头行结构
+id=729 cells=3 area=54 local_hint=False rc=27 cc=2 q=请恢复 76.jpg 中“Simple Income Statement”的表头行结构。
+id=739 cells=3 area=111 local_hint=False rc=37 cc=3 q=请恢复 77.pdf 中“Monster Beverage consolidated financi
+id=749 cells=5 area=108 local_hint=False rc=27 cc=4 q=请恢复 78.png 中“Amazon consolidated statements of ope
+id=759 cells=6 area=160 local_hint=False rc=40 cc=4 q=请恢复 79.png 中“Amazon consolidated statements of cas
+id=779 cells=9 area=40 local_hint=False rc=8 cc=5 q=请恢复 81.png 中“School board classes table”的表头行结构。
+id=789 cells=13 area=96 local_hint=False rc=8 cc=12 q=请恢复 82.png 中“表1-2 分部分项工程量清单及计价表（号清单）”的表头行结构。
+id=799 cells=8 area=84 local_hint=False rc=12 cc=7 q=请恢复 83.png 中“The Error Rate on Different Forms”的表头
+id=809 cells=26 area=221 local_hint=False rc=17 cc=13 q=请恢复 84.png 中“Catalog of chemicals”的表头行结构。
+id=819 cells=16 area=162 local_hint=False rc=18 cc=9 q=请恢复 85.png 中“Production and distribution”的表头行结构。
+id=829 cells=5 area=85 local_hint=False rc=17 cc=5 q=请恢复 86.png 中“entry field value table”的表头行结构。
+id=839 cells=13 area=78 local_hint=False rc=6 cc=13 q=请恢复 87.png 中“Classification Results Heatmap”的表头行结构
+id=849 cells=14 area=90 local_hint=False rc=10 cc=9 q=请恢复 88.png 中“Games by Continent”的表头行结构。
+id=869 cells=24 area=48 local_hint=False rc=8 cc=6 q=请恢复 90.png 中的整个表格。
+id=879 cells=15 area=45 local_hint=False rc=5 cc=9 q=请恢复 91.png 中“Actual vs Predicted confusion/percent
+id=889 cells=43 area=143 local_hint=False rc=11 cc=13 q=请恢复 92.jpg 中“Funnel management plan conversion rat
+id=899 cells=4 area=15 local_hint=False rc=5 cc=3 q=请恢复 93.jpg 中“ASCII Summary records table”的表头行结构。
+
+=== number answers with trailing zeros ===
+id=34 ans='32239502.30'
+id=37 ans='30650191.70'
+id=45 ans='1987509.80'
+id=185 ans='8.0'
+id=187 ans='2.0'
+id=265 ans='94.0'
+id=385 ans='0.0170'
+id=436 ans='90.10'
+id=437 ans='95.10'
+id=568 ans='82.80'
+id=584 ans='40.00'
+id=664 ans='61.0'
+id=717 ans='110.00'
+id=718 ans='118.80'
+id=812 ans='250.00'
+id=885 ans='85.0'
+
+=== answers with leading/trailing/double spaces or fullwidth ===
+total_spacey=0
+
+=== suspicious empty / nearly empty ===
+id=19 qt=thinking fmt=json_array file=003.pdf ans='[""]' q=营业总收入由那些项组成？
+id=241 qt=extract fmt=number file=025.png ans='--' q=“Three or more times a year”这一行中，住宅客户 Mild 列的值是什么？

@@ -1,0 +1,64 @@
+total=908 score_unit=0.1101 gap_to_82.5=4.5 questions
+
+=== by question_type ===
+qt
+extract      652
+thinking     217
+structure     39
+
+=== by answer_format ===
+fmt
+string        396
+number        365
+json_array    107
+json           40
+
+=== blankish answers n=1 ===
+id=19 qt=thinking fmt=json_array ans='[""]' q=营业总收入由那些项组成？
+
+=== yes/no style answers n=25 ===
+Counter({'是': 19, '否': 6})
+questions containing 是否/请判断: 31
+those NOT answered 是/否: 8
+  id=118 ans='[3,"[\'Chemistry\', \'Biology\', \'Zoology\']","[\'History\', \'Geography\']","是"]' q=请按表中顺序列出以下字段的答案：数学表的阶段数、科学表包含科目、社会科学表包含科目、是否多级表头。
+  id=158 ans='["pieces","11EU/2016 R1 Page 45 of 81","是","否"]' q=请按表中顺序列出以下字段的答案：Leads Set 数量单位、第一页脚注格式、Photoelectric 是否带红字标题、Leads Set
+  id=358 ans='["是","是","否","是"]' q=请按表中顺序列出以下字段的答案：是否横向拍摄、是否含金额列、是否含订单号字段、是否含明细行。
+  id=488 ans='["否","是","是"]' q=请按表中顺序列出以下字段的答案：是否含税率列、是否含日期字段、是否含签章栏。
+  id=498 ans='["是","是","是","是"]' q=请按表中顺序列出以下字段的答案：是否含单价列、是否含金额列、是否含多行明细、是否横向拍摄。
+  id=528 ans='[399,79999,"是",3]' q=请按表中顺序列出以下字段的答案：最低活动价、最高活动价、备注中是否含退换规则、表格下方说明条数。
+  id=538 ans='["是","是","是","22:00"]' q=请按表中顺序列出以下字段的答案：是否包含自由调整、是否包含评审记录、是否包含复盘、最后时间段。
+  id=557 ans='DeepSeek-V4-Pro Base' q=请判断 AGIEval (EM) 三个模型中分数最高的模型名称。
+
+=== structure n=39 invalid_or_unparseable=0 geom_violation=0 ===
+geom_ids=[]
+
+answers_with_thousand_comma=20
+  id=7 ans=[95250987.68,"","","",881323.23,"","","",15401527.35,10540766.93,""]
+  id=8 ans=["","","",17663778.06,"","",24132677.69,908086512.3,26653628.18,"","",3907669.91
+  id=18 ans=[40864602.2,41567841.56]
+  id=21 ans=[407166999.88,407166999.88,452817690.44]
+  id=35 ans=[7586126.44,24653375.86,24653375.86,32239502.3]
+  id=38 ans=[4881245.42,25768946.28,25768946.28]
+  id=57 ans=[311640136.81,1502429632.12,802815549.18,33551089.51,24711347.91,2675147755.53]
+  id=58 ans=["","",81371.67,1876349.13,1767848.19]
+  id=168 ans=["Idaho State University",313,250,"Fall 2012 NDT Ranking Report Page 13"]
+  id=198 ans=[129,129,"$'000",5]
+  id=218 ans=[2806,6485,5735,5]
+  id=228 ans=[2175,3418,"34.7",21]
+  id=239 ans=[297,300]
+  id=377 ans=["50–150",50,100,150]
+  id=528 ans=[399,79999,"是",3]
+
+=== number format questions n=365 ===
+number_answers_not_plain_numeric=2
+  id=241 ans='--' q=“Three or more times a year”这一行中，住宅客户 Mild 列的值是什么？
+  id=304 ans='9,3' q=请提取“Império da Formiga nota”对应的值。
+
+=== language question answers ===
+Counter({'英语': 19, '中文': 12, '中英文': 4, '中文和英文': 3, '西班牙语': 1, '立陶宛语': 1, '挪威语': 1, '斯洛伐克语': 1, '葡萄牙语': 1, '荷兰语和法语': 1})
+
+=== json_array empty-ish n=1 ===
+  id=19 ans='[""]' q=营业总收入由那些项组成？
+
+=== review data n=411 buckets=Counter({'majority': 285, 'split': 126}) ===
+current_answer_not_in_any_of_three_models=49

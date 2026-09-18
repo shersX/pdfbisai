@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>多数/分歧题审核</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-left">
+      <strong>审核台</strong>
+      <span id="progress" class="muted">加载中…</span>
+      <span id="bucket" class="pill"></span>
+      <span id="filterLabel" class="muted"></span>
+    </div>
+    <div class="topbar-right">
+      <label class="filter">
+        筛选
+        <select id="filter">
+          <option value="pending" selected>未审</option>
+          <option value="all">全部</option>
+          <option value="done">已审</option>
+        </select>
+      </label>
+      <button type="button" id="btnPrev" class="btn">上一项</button>
+      <button type="button" id="btnNext" class="btn">下一项</button>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <p class="muted">正在加载题目…</p>
+  </main>
+
+  <footer class="footer muted">
+    快捷键：1=vl　2=flash　3=max　←上一项　→下一项　判定后自动跳到下一未审题
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>

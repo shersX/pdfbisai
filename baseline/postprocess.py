@@ -111,14 +111,30 @@ def _normalize_structure(obj: dict[str, Any]) -> dict[str, Any]:
 
 
 def _normalize_scalars(arr: list[Any]) -> list[Any]:
-    out = []
+    """json_array 元素：数字保持数值类型（不加引号）；空为 \"\"；文本为字符串。"""
+    out: list[Any] = []
     for x in arr:
         if x is None:
             out.append("")
-        elif isinstance(x, (int, float)) and not isinstance(x, bool):
-            out.append(_number_to_str(x) if isinstance(x, float) and not float(x).is_integer() else _maybe_int(x))
+        elif isinstance(x, bool):
+            out.append(x)
+        elif isinstance(x, int):
+            out.append(x)
+        elif isinstance(x, float):
+            out.append(int(x) if x.is_integer() else x)
         else:
-            out.append(_clean_scalar(str(x)))
+            s = _clean_scalar(str(x))
+            if s == "":
+                out.append("")
+                continue
+            # 纯数字字符串 -> 数值，避免 ["3.6"] 这种带引号
+            if re.fullmatch(r"-?\d+", s):
+                out.append(int(s))
+            elif re.fullmatch(r"-?\d+\.\d+", s):
+                f = float(s)
+                out.append(int(f) if f.is_integer() else f)
+            else:
+                out.append(s)
     return out
 
 
