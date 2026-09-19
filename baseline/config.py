@@ -22,6 +22,11 @@ class Settings:
     max_pdf_pages: int
     pdf_zoom: float
     max_workers: int
+    mineru_token: str
+    mineru_api_base: str
+    mineru_model_version: str
+    mineru_llm_model: str
+    mineru_md_max_chars: int
 
 
 def get_settings() -> Settings:
@@ -38,6 +43,9 @@ def get_settings() -> Settings:
     model = os.getenv("QWEN_VL_MODEL", "qwen-vl-max").strip()
     # 每个模型独立输出子目录，避免不同模型的 checkpoint 混在一起
     output_subdir = os.getenv("OUTPUT_SUBDIR", model).strip()
+    raw_mineru = os.getenv("MINERU_API_URL", "https://mineru.net/api/v4").strip()
+    mineru_base = _normalize_mineru_base(raw_mineru)
+    mineru_llm = os.getenv("MINERU_LLM_MODEL", "").strip() or model
     return Settings(
         api_key=api_key,
         base_url=base_url,
@@ -49,4 +57,17 @@ def get_settings() -> Settings:
         max_pdf_pages=int(os.getenv("MAX_PDF_PAGES", "8")),
         pdf_zoom=float(os.getenv("PDF_ZOOM", "2.0")),
         max_workers=max(1, int(os.getenv("MAX_WORKERS", "3"))),
+        mineru_token=os.getenv("MINERU_API_KEY", "").strip(),
+        mineru_api_base=mineru_base,
+        mineru_model_version=os.getenv("MINERU_MODEL_VERSION", "vlm").strip() or "vlm",
+        mineru_llm_model=mineru_llm,
+        mineru_md_max_chars=max(4000, int(os.getenv("MINERU_MD_MAX_CHARS", "80000"))),
     )
+
+
+def _normalize_mineru_base(url: str) -> str:
+    base = url.strip().rstrip("/")
+    for suffix in ("/extract/task", "/file-urls/batch", "/extract-results/batch"):
+        if base.endswith(suffix):
+            return base[: -len(suffix)]
+    return base

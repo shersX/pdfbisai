@@ -133,6 +133,19 @@ def build_user_prompt(
     return "\n".join(parts)
 
 
+def build_mineru_user_prompt(
+    question: str,
+    question_type: str,
+    table_hint: str | None,
+    answer_format: str | None,
+    markdown: str,
+) -> str:
+    """同 build_user_prompt，但用 MinerU Markdown 替代图像。"""
+    text = build_user_prompt(question, question_type, table_hint, answer_format)
+    text = text.replace("文档图像如下。", "下面是 MinerU 解析出的文档 Markdown（含表格），请据此作答。")
+    return text + "\n\n----- MinerU Markdown 开始 -----\n" + markdown + "\n----- MinerU Markdown 结束 -----"
+
+
 def system_prompt_for(question_type: str, answer_format: str | None) -> str:
     qt = (question_type or "").strip().lower()
     if qt == "structure" or answer_format == "json":
