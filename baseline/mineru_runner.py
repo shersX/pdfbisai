@@ -41,17 +41,38 @@ def resolve_tests_path(preferred: Path) -> Path:
     )
 
 
-def load_json_array_queue(tests_path: Path) -> pd.DataFrame:
+def load_json_array_queue(tests_path: Path, ids: list[int] | None = None) -> pd.DataFrame:
     path = resolve_tests_path(tests_path)
     df = pd.read_excel(path, sheet_name=SHEET_NAME, dtype=str, keep_default_na=False)
     required = {"id", "file_name", "question_type", "question", "answer_format"}
     missing = required - set(df.columns)
     if missing:
         raise ValueError(f"{path.name} / {SHEET_NAME} 缺少字段: {sorted(missing)}")
+    df["id"] = df["id"].astype(str).str.strip()
+    if ids:
+        id_set = {str(i) for i in ids}
+        picked = df[df["id"].isin(id_set)].copy()
+        miss = sorted(id_set - set(picked["id"]), key=lambda x: int(x) if x.isdigit() else x)
+        print(
+            f"题目表 {path.name} / {SHEET_NAME}: 指定 {len(id_set)} 题，命中 {len(picked)}"
+            + (f"，缺失 {miss}" if miss else "")
+        )
+        return picked
     ja = df[df["answer_format"].astype(str).str.strip().str.lower() == "json_array"].copy()
-    ja["id"] = ja["id"].astype(str).str.strip()
     print(f"题目表 {path.name} / {SHEET_NAME}: 共 {len(df)} 题，json_array {len(ja)} 题")
     return ja
+
+
+def load_sheet_queue(tests_path: Path) -> pd.DataFrame:
+    """「多数与分歧」整表，用于补跑尚未 MinerU 解析的文件。"""
+    path = resolve_tests_path(tests_path)
+    df = pd.read_excel(path, sheet_name=SHEET_NAME, dtype=str, keep_default_na=False)
+    df["id"] = df["id"].astype(str).str.strip()
+    print(
+        f"题目表 {path.name} / {SHEET_NAME}: 整表 {len(df)} 题，"
+        f"文件 {df['file_name'].nunique()} 个"
+    )
+    return df
 
 
 def parsed_dir(settings: Settings, file_name: str) -> Path:
@@ -147,10 +168,11 @@ def run_mineru_pipeline(
     parse_only: bool = False,
     llm_only: bool = False,
 ) -> Path | None:
-    df = load_json_array_queue(settings.tests_path)
-    if ids:
-        id_set = {str(i) for i in ids}
-        df = df[df["id"].isin(id_set)].copy()
+    df = load_json_array_queue(settings.tests_path, ids=ids)
+    if parse_only and not ids:
+        df = load_sheet_queue(settings.tests_path)
+    if ids and df.empty:
+        raise SystemExit(f"指定 id 在「{SHEET_NAME}」中均未命中: {ids}")
     if limit is not None:
         df = df.head(limit).copy()
 
