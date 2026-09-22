@@ -1,0 +1,8 @@
+source: D:\desktop\multimodal_table_recognition\submission.xlsx
+total answers: 908
+type counts: {'s': 906, 'n': 2}
+numeric cells to convert: 2
+
+id	old_value	old_py_type	new_text
+11	18	int	18
+12	13	int	13
